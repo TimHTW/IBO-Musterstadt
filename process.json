@@ -1,0 +1,1859 @@
+{
+  "_id": "561fc59f9dcdde3b9bd540334a0005ca",
+  "_rev": "2-2c8f44ac3cdf035bf2ec63220ab11dd1",
+  "process": {
+    "_comment": "Es handelt sich um Prozesse, diese beinhalten Struktur- und Metainformationen",
+    "id": "https://process.stadt.de/process/1",
+    "reference (optional)": "AZ1337/11",
+    "initiator": "stakeholder_3",
+    "connection": {
+      "from": [],
+      "to": []
+    },
+    "parent": "",
+    "name": "Mittelstadt",
+    "description": "TODO",
+    "location": [
+      "location_1"
+    ],
+    "start": "2015-01-01T11:11:00+01:00",
+    "end (optional)": "2016-05-14T11:11:00+01:00",
+    "participation": "partial opened",
+    "participants": [],
+    "transformation": {
+      "type": "=",
+      "info": "TODO",
+      "decision": "false"
+    },
+    "results (optional)": [
+      {
+        "id": "https://process.stadt.de/results/1",
+        "name": "Final_Wohngebiet Mittelstadt",
+        "description": "Gesamtergebnisse Mittelstadt Prozess",
+        "copyright (optional)": "",
+        "text (optional)": "",
+        "files (optional)": [],
+        "created": "2011-11-11T11:11:00+01:00",
+        "modified": "2012-11-11T11:11:00+01:00"
+      }
+    ],
+    "children": [
+      {
+        "id": "https://process.stadt.de/process/11",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [],
+          "to": [
+            "https://process.stadt.de/process/12",
+            "https://process.stadt.de/process/112",
+            "https://process.stadt.de/process/117"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Grundsatzbeschluss",
+        "description": "Grundsatzbeschluss zur Wohnbebauung der Fläche",
+        "location": [
+          "location_1"
+        ],
+        "start": "2012-12-18T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_1",
+          "stakeholder_2",
+          "stakeholder_10"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34000fafc",
+            "name": "Grundsatzbeschluss",
+            "description": "Grundsatzbeschluss",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/12",
+        "reference (optional)": "",
+        "initiator": "stakeholder_15",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/11"
+          ],
+          "to": [
+            "https://process.stadt.de/process/13"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Beschluss zgrundhafter Ausbau der Erschliessungsstraße, und Vergabe der Planungsleistungen",
+        "description": "Beschluss zgrundhafter Ausbau der Erschliessungsstraße, und Vergabe der Planungsleistungen",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-01-05T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_1",
+          "stakeholder_2",
+          "stakeholder_3"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/13",
+        "reference (optional)": "",
+        "initiator": "stakeholder_15",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/12"
+          ],
+          "to": [
+            "https://process.stadt.de/process/14"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Öffentliche Ausschreibung der Baugewerke der übergeordneten Erschliessungsstraße",
+        "description": "Öffentliche Ausschreibung der Baugewerke der übergeordneten Erschliessungsstraße",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-01-14T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "Erstellen eines Antrages",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae3400110b3",
+            "name": "Rückfragenkolloquium",
+            "description": "Rückfragenkolloquium",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/14",
+        "reference (optional)": "",
+        "initiator": "stakeholder_15",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/13"
+          ],
+          "to": [
+            "https://process.stadt.de/process/15"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Vergabe der Baugewerke für die Erschliessungsstraße",
+        "description": "Vergabe der Baugewerke für die Erschliessungsstraße",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-02-17T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340011f8c",
+            "name": "Wettberwerbsbearbeitung",
+            "description": "Wettberwerbsbearbeitung",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/15",
+        "reference (optional)": "",
+        "initiator": "stakeholder_16",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/14"
+          ],
+          "to": [
+            "https://process.stadt.de/process/144"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Bau der übergeordneten Erschliessungsstraße",
+        "description": "Bau der übergeordneten Erschliessungsstraße",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-03-01T11:11:00+01:00",
+        "end (optional)": "2015-11-27T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3",
+          "stakeholder_15"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae3400126ed",
+            "name": "Jurysitzung-PDF",
+            "description": "Jurysitzung-PDF",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          },
+          {
+            "id": "0b3d7950669df156168ccae340012acc",
+            "name": "Platzzeichnung_dummy-JPG",
+            "description": "Platzzeichnung_dummy-JPG",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/16",
+        "reference (optional)": "",
+        "initiator": "stakeholder_5",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/118"
+          ],
+          "to": [
+            "https://process.stadt.de/process/17"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Erschliessungsplanung",
+        "description": "Erschliessungsplanung,  Beginn der Erarbeitung der Erschliessungsplanung des Gebietes mit straßen und Medien",
+        "location": [
+          "location_4"
+        ],
+        "start": "2013-09-01T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3",
+          "stakeholder_15"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340013abc",
+            "name": "Aufstellungsbeschluss",
+            "description": "Aufstellungsbeschluss",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/17",
+        "reference (optional)": "",
+        "initiator": "stakeholder_15",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/16"
+          ],
+          "to": [
+            "https://process.stadt.de/process/144"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Baubeginn",
+        "description": "Baubeginn - Ausbau der Internen Erschliessungsstraßen",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-04-07T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_4",
+          "stakeholder_5",
+          "stakeholder_16"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340014079",
+            "name": "Pressemitteilung_wettbewerb",
+            "description": "Pressemitteilung_wettbewerb",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/18",
+        "reference (optional)": "",
+        "initiator": "stakeholder_2",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/115"
+          ],
+          "to": [
+            ""
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Veranstaltung zur Vorstellung des Wettbewerbsergebnisses",
+        "description": "Veranstaltung zur Vorstellung des Wettbewerbsergebnisses",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-09-27T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_4",
+          "stakeholder_14"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae3400147f1",
+            "name": "Aufstellungsbeschluss",
+            "description": "Aufstellungsbeschluss",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/19",
+        "reference (optional)": "",
+        "initiator": "stakeholder_2",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/122"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Veranstaltung zur Vorstellung der Entwürfe",
+        "description": "Veranstaltung zur Vorstellung der Entwürfe",
+        "location": [
+          "location_1"
+        ],
+        "start": "2014-06-24T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_4",
+          "stakeholder_14"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340014c54",
+            "name": "Veroeffentlichung_im_Standtanzeiger",
+            "description": "Veroeffentlichung_im_Standtanzeiger",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/110",
+        "reference (optional)": "",
+        "initiator": "stakeholder_2",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/142"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Letzte Werbeveranstaltung",
+        "description": "Letzte Werbeveranstaltung",
+        "location": [
+          "location_1"
+        ],
+        "start": "2017-03-15T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_4",
+          "stakeholder_14"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/111",
+        "reference (optional)": "",
+        "initiator": "stakeholder_12",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/119"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Verkauf des Grundstückes an den Investor",
+        "description": "Verkauf des Grundstückes an den Investor. Das Grundstück gehört der Stadt, um den Verkauf an den Investor zu vollziehen muss der Stadtrat zustimmen",
+        "location": [
+          "location_1"
+        ],
+        "start": "2014-01-11T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_1",
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae3400158e2",
+            "name": "Verkauf",
+            "description": "Verkauf",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          },
+          {
+            "id": "0b3d7950669df156168ccae340016894",
+            "name": "Erschliessungplanung_dummy",
+            "description": "Erschliessungplanung_dummy",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/112",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/11"
+          ],
+          "to": [
+            "https://process.stadt.de/process/113"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Wettbewerbsauslobung",
+        "description": "Wettbewerbsauslobung",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-04-01T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001016f",
+            "name": "Wettbewerbsauslobung",
+            "description": "Wettbewerbsauslobung",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          },
+          {
+            "id": "0b3d7950669df156168ccae340017122",
+            "name": "Staedtebaulicher_Vertrag",
+            "description": "Staedtebaulicher_Vertrag",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/113",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/112"
+          ],
+          "to": [
+            "https://process.stadt.de/process/114"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Rückfragenkolloquium",
+        "description": "Rückfragenkolloquium",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-04-30T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_4",
+          "stakeholder_8",
+          "stakeholder_9"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae3400174e2",
+            "name": "Vorentwurf_Bebauungsplan_dummy",
+            "description": "Vorentwurf_Bebauungsplan_dummy",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/114",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/113"
+          ],
+          "to": [
+            "https://process.stadt.de/process/115"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Wettbewerbsbearbeitung",
+        "description": "Wettbewerbsbearbeitung",
+        "location": [
+          "location_2"
+        ],
+        "start": "2013-04-30T11:11:00+01:00",
+        "end (optional)": "2013-06-10T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3",
+          "stakeholder_8",
+          "stakeholder_9"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340018179",
+            "name": "Stellungnahme",
+            "description": "Stellungnahme",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/115",
+        "reference (optional)": "",
+        "initiator": "stakeholder_2",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/114"
+          ],
+          "to": [
+            "https://process.stadt.de/process/18",
+            "https://process.stadt.de/process/121"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Jurysitzung",
+        "description": "Jurysitzung zur Wettbewerbsentscheidung",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-06-26T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_4",
+          "stakeholder_11"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340018766",
+            "name": "Entwurf_dummy",
+            "description": "Entwurf_dummy",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/116",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/115"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Pressemitteilung",
+        "description": "Pressemitteilung über das Wettbewerbsergebnis",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-09-16T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": "=",
+          "info": "",
+          "decision": "nein"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340019933",
+            "name": "Beschluss_Auslage",
+            "description": "Beschluss_Auslage",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/117",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/11"
+          ],
+          "to": [
+            "https://process.stadt.de/process/118",
+            "https://process.stadt.de/process/119"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Aufstellungsbeschluss",
+        "description": "Aufstellungsbeschluss durch den Stadtentwicklungsausschuss mit Abgrenzung des Geltungsbereiches der Fläche",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-08-29T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_10"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340018a7d",
+            "name": "Beschluss_Auslage",
+            "description": "Beschluss_Auslage",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/118",
+        "reference (optional)": "",
+        "initiator": "stakeholder_2",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/117"
+          ],
+          "to": [
+            "https://process.stadt.de/process/16"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "städtebaulicher Vertrag",
+        "description": "städtebaulicher Vertrag - Zwischen dem Investor und der Stadt wird ein städtebaulicher Vertag geschlossen, welcher die Erschliessung und die Vermarktung der Grundstücke regelt",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-08-31T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_12"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae340019a9f",
+            "name": "Veroeffentlichung_im_stadtanzeiger",
+            "description": "Veroeffentlichung_im_stadtanzeiger",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/119",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/117"
+          ],
+          "to": [
+            "https://process.stadt.de/process/120",
+            "https://process.stadt.de/process/121"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Aufstellungsbeschluss",
+        "description": "Aufstellungsbeschluss durch den Stadtrat mit Abgrenzung des Geltungsbereiches der Fläche",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-09-24T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_1",
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001aa64",
+            "name": "Stellungnahme",
+            "description": "Stellungnahme",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/120",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/120"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "VerÖffentlichung im Stadtanzeiger - frühzeitige Beteiligung der Öffentlichkeit",
+        "description": "VerÖffentlichung im Stadtanzeiger - frühzeitige Beteiligung der Öffentlichkeit nach §13a Abs. 3 Nr. 2 BauGB",
+        "location": [
+          "location_1"
+        ],
+        "start": "2013-10-09T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": "=",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001b245",
+            "name": "Stellungnahme_Buerger",
+            "description": "Stellungnahme_Buerger",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/121",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/115",
+            "https://process.stadt.de/process/119"
+          ],
+          "to": [
+            "https://process.stadt.de/process/122"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Vertragsabschluss B-Plan Bearbeiter",
+        "description": "Vertragsabschluss B-Plan Bearbeiter",
+        "location": [
+          "location_1"
+        ],
+        "start": "2014-05-13T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001b26c",
+            "name": "Abwaegungsprotokoll_dummy",
+            "description": "Abwaegungsprotokoll_dummy",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/122",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/121"
+          ],
+          "to": [
+            "https://process.stadt.de/process/123"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Vorentwurfsplanung",
+        "description": "Vorentwurfsplanung  Erarbeitung des Vorentwurfes des Rechtsplanes",
+        "location": [
+          "location_3"
+        ],
+        "start": "2014-05-14T11:11:00+01:00",
+        "end (optional)": "2014-06-23T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001bb2e",
+            "name": "Baubeginn_Erschliessungsstrasse_dummy-jpg",
+            "description": "Baubeginn_Erschliessungsstrasse_dummy-jpg",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/123",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/122"
+          ],
+          "to": [
+            "https://process.stadt.de/process/124"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "frühzeitige TÖB Abfrage - frühzeitige Behördenbeteiligung",
+        "description": "frühzeitige TÖB Abfrage - frühzeitige Behördenbeteiligung  - Abfrage der Träger Öffentlicher Belange, Fachämter und Nachbargemeinden. ",
+        "location": [
+          "location_3"
+        ],
+        "start": "2014-06-24T11:11:00+01:00",
+        "end (optional)": "2014-07-24T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001ca51",
+            "name": "Entwurf_ueberarbeitet_dummy_Kopie-jpg",
+            "description": "Entwurf_ueberarbeitet_dummy_Kopie-jpg",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/124",
+        "reference (optional)": "",
+        "initiator": "stakeholder_6",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/123"
+          ],
+          "to": [
+            "https://process.stadt.de/process/125"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Kartierung des Gebietes für den Artenschutz Aufnahme aller Habitate ",
+        "description": "Kartierung des Gebietes für den Artenschutz Aufnahme aller Habitate ",
+        "location": [
+          "location_1"
+        ],
+        "start": "2014-07-01T11:11:00+01:00",
+        "end (optional)": "2014-10-01T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001d47c",
+            "name": "Stellungnahme",
+            "description": "Stellungnahme",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/125",
+        "reference (optional)": "",
+        "initiator": "stakeholder_6",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/124"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Fertigstellung Artenschutzgutachten",
+        "description": "Fertigstellung Artenschutzgutachten",
+        "location": [
+          "location_1"
+        ],
+        "start": "2014-10-28T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/126",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/123"
+          ],
+          "to": [
+            "https://process.stadt.de/process/127"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Entwurfsplanung",
+        "description": "Entwurfsplanung Erarbeitung des Entwurfes des Rechtsplanes",
+        "location": [
+          "location_3"
+        ],
+        "start": "2014-07-24T11:11:00+01:00",
+        "end (optional)": "2014-12-01T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/127",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/126"
+          ],
+          "to": [
+            "https://process.stadt.de/process/128"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Beschluss zur Auslage Entwurf",
+        "description": "Beschluss zur Auslage Entwurf, Der Stadtentwicklungsausschuss beschliesst die Auslage des Entwurfes",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-01-08T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_10"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/128",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/127"
+          ],
+          "to": [
+            "https://process.stadt.de/process/129"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Beschluss zur Auslage Entwurf",
+        "description": "Beschluss zur Auslage Entwurf, Der Stadtrat beschliesst die Auslage des Entwurfes",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-01-27T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_1",
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/129",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/128"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "VerÖffentlichung im Stadtanzeiger",
+        "description": "VerÖffentlichung im Stadtanzeiger - Bekanntmachung der Auslage  im Stadtanzeiger ",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-01-28T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "open",
+        "participants": [
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": "=",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001e2bb",
+            "name": "Veroeffentlichung_Stadtanzeiger",
+            "description": "Veroeffentlichung_Stadtanzeiger",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/130",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/127"
+          ],
+          "to": [
+            "https://process.stadt.de/process/132"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "TÖB Beteiligung - Behördenbeteiligung",
+        "description": "TÖB Beteiligung - Behördenbeteiligung - Beteiligung der Träger Öffentlicher Belange, Fachämter und Nachbargemeinden. Alle relaevanten TÖBs etc. werden angeschrieben und haben die Möglichkeit innerhalb der einzuhaltenden Frist eine Stellungnahme zum Entwurf abzugeben.",
+        "location": [
+          "location_3"
+        ],
+        "start": "2015-01-20T11:11:00+01:00",
+        "end (optional)": "2015-02-24T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/131",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/128"
+          ],
+          "to": [
+            "https://process.stadt.de/process/132"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "1. Öffentliche Auslage des Entwurfes",
+        "description": "1. Öffentliche Auslage des Entwurfes - Die Bürger haben die Möglichkeit der Einsicht in den Entwurf für die Dauer von 4 Wochen und können innerhalb der einzuhaltenden Frist eine Stellungnahme zum Entwurf abgeben",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-02-09T11:11:00+01:00",
+        "end (optional)": "2015-03-09T11:11:00+01:00",
+        "participation": "open",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/132",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/130",
+            "https://process.stadt.de/process/131"
+          ],
+          "to": [
+            "https://process.stadt.de/process/133",
+            "https://process.stadt.de/process/134"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Abwägung der Stellungnahmen ",
+        "description": "Abwägung der Stellungnahmen der Bürger und der Behörden\nDas Stadtplanungsamt prüft in Zusammenarbeit mit dem Planer alle Stellungnahmen auf Relevanz und erarbeitet dazu ein Abwägungsprotokoll.",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-01-20T11:11:00+01:00",
+        "end (optional)": "2015-03-20T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/133",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/132"
+          ],
+          "to": [
+            "https://process.stadt.de/process/137",
+            "https://process.stadt.de/process/138",
+            "https://process.stadt.de/process/139"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "überarbeitung der Entwurfsplanung",
+        "description": "überarbeitung der Entwurfsplanung. Die Entwurfsplanung wird entsprechend dem Ergebnis des Abwägungsprotokoll angepasst",
+        "location": [
+          "location_3"
+        ],
+        "start": "2015-03-20T11:11:00+01:00",
+        "end (optional)": "2015-07-10T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/134",
+        "reference (optional)": "",
+        "initiator": "stakeholder_6",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/132"
+          ],
+          "to": [
+            "https://process.stadt.de/process/135"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Beaufragung Fachbüro",
+        "description": "Beaufragung Fachbüro",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-05-15T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/135",
+        "reference (optional)": "",
+        "initiator": "stakeholder_6",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/134"
+          ],
+          "to": [
+            "https://process.stadt.de/process/136"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Erneute Kartierung des Gebietes für den Artenschutz Aufnahme aller Habitate ",
+        "description": "Erneute Kartierung des Gebietes für den Artenschutz Aufnahme aller Habitate ",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-05-16T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/136",
+        "reference (optional)": "",
+        "initiator": "stakeholder_6",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/135"
+          ],
+          "to": [
+            "https://process.stadt.de/process/137",
+            "https://process.stadt.de/process/138",
+            "https://process.stadt.de/process/139"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Fertigstellung Gutachten",
+        "description": "Fertigstellung Gutachten",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-06-01T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/137",
+        "reference (optional)": "",
+        "initiator": "stakeholder_4",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/133",
+            "https://process.stadt.de/process/136"
+          ],
+          "to": [
+            "https://process.stadt.de/process/140"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "TÖB Beteiligung zum geänderten Entwurf",
+        "description": "TÖB Beteiligung zum geänderten Entwurf - Beteiligung der relevanten Träger Öffentlicher Belange, nur die nach der Änderung relevanten TÖB werden angeschrieben und haben die Möglichkeit innerhalb der einzuhaltenden Frist einen Stellungnahme zum Entwurf abzugeben",
+        "location": [
+          "location_3"
+        ],
+        "start": "2015-07-10T11:11:00+01:00",
+        "end (optional)": "2015-08-14T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_3"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/138",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/133",
+            "https://process.stadt.de/process/136"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "VerÖffentlichung im Stadtanzeiger",
+        "description": "VerÖffentlichung im Stadtanzeiger - Bekanntmachung der Auslage  im Stadtanzeiger ",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-07-22T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "open",
+        "participants": [
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": "=",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": []
+      },
+      {
+        "id": "https://process.stadt.de/process/139",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/133",
+            "https://process.stadt.de/process/136"
+          ],
+          "to": [
+            "https://process.stadt.de/process/140"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "2. Öffentliche Auslage des geänderten Entwurf",
+        "description": "2. Öffentliche Auslage des geänderten Entwurf - Die Bürger haben die Möglichkeit der Einsicht in den Entwurf für die Dauer von 4 Wochen und können innerhalb der einzuhaltenden Frist eine Stellungnahme zum geänderten Entwurf abgeben",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-08-03T11:11:00+01:00",
+        "end (optional)": "2015-09-04T11:11:00+01:00",
+        "participation": "open",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "Erstellen eines Antrages",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001ef82",
+            "name": "Stellungnahme_Buerger",
+            "description": "Stellungnahme_Buerger",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/140",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/137",
+            "https://process.stadt.de/process/139"
+          ],
+          "to": [
+            "https://process.stadt.de/process/141"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Abwägung der Stellungnahmen zum geänderten Entwurf",
+        "description": "Abwägung der Stellungnahmen zum geänderten Entwurf der Bürger und der TÖB.\nDas Stadtplanungsamt prüft in zusammenarbeit mit dem Planer alle Stellungnahmen zum geänderten Entwurf auf Relevanz und erarbeitet dazu ein Abwägungsprotokoll.",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-09-16T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_4"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001f122",
+            "name": "Abwaegungsprotokoll_dummy_Kopie",
+            "description": "Abwaegungsprotokoll_dummy_Kopie",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/141",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/140"
+          ],
+          "to": [
+            "https://process.stadt.de/process/142"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Satzungsbeschluss",
+        "description": "Abwägungs- und Satzungsbeschluss. Der Stadtentwicklungsausschuss beschliesst die Abwägung und den geänderten Entwurf",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-10-08T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_10"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34001f78e",
+            "name": "Satzungsbeschluss",
+            "description": "Satzungsbeschluss",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/142",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/141"
+          ],
+          "to": [
+            "https://process.stadt.de/process/143",
+            "https://process.stadt.de/process/144"
+          ]
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Satzungsbeschluss",
+        "description": "Abwägungs- und Satzungsbeschluss. Der Stadtrat beschliesst die Abwägung und den geänderten Entwurf",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-11-03T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "partial opened",
+        "participants": [
+          "stakeholder_1",
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": ">",
+          "info": "",
+          "decision": "true"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae34002076c",
+            "name": "Satzungsbeschluss",
+            "description": "Satzungsbeschluss",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/143",
+        "reference (optional)": "",
+        "initiator": "stakeholder_3",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/142"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "VerÖffentlichung im Stadtanzeiger",
+        "description": "VerÖffentlichung im Stadtanzeiger - Bekanntmachung des Satzungsbeschlusses, Inkrafttreten der Satzung des Bebauungsplanes, Eintreten der Rechtskraft.",
+        "location": [
+          "location_1"
+        ],
+        "start": "2015-11-17T11:11:00+01:00",
+        "end (optional)": "",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "Erstellen eines Antrages",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae3400210dc",
+            "name": "Veroeffentlichung_Stadtanzeiger",
+            "description": "Veroeffentlichung_Stadtanzeiger",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      },
+      {
+        "id": "https://process.stadt.de/process/144",
+        "reference (optional)": "",
+        "initiator": "stakeholder_14",
+        "connection": {
+          "from": [
+            "https://process.stadt.de/process/15",
+            "https://process.stadt.de/process/17",
+            "https://process.stadt.de/process/142"
+          ],
+          "to": []
+        },
+        "parent": "https://process.stadt.de/process/1",
+        "children": [],
+        "name": "Baubeginn",
+        "description": "Baubeginn - erste private Häuser werden errichtet",
+        "location": [
+          "location_1"
+        ],
+        "start": "2016-04-01T11:11:00+01:00",
+        "end (optional)": "2018-01-01T11:11:00+01:00",
+        "participation": "closed",
+        "participants": [
+          "stakeholder_2",
+          "stakeholder_3",
+          "stakeholder_16"
+        ],
+        "transformation": {
+          "type": "<",
+          "info": "",
+          "decision": "false"
+        },
+        "results (optional)": [
+          {
+            "id": "0b3d7950669df156168ccae3400214fc",
+            "name": "Baubeginn_dummy-jpg",
+            "description": "Baubeginn_dummy-jpg",
+            "copyright (optional)": "",
+            "text (optional)": "",
+            "files (optional)": [],
+            "created": "2011-11-11T11:11:00+01:00",
+            "modified": "2012-11-11T11:11:00+01:00"
+          }
+        ]
+      }
+    ],
+    "created": "2011-11-11T11:11:00+01:00",
+    "modified": "2012-11-11T11:11:00+01:00"
+  },
+  "system": {
+    "_comment": "Es handelt sich um die Systembeschreibung",
+    "id": "https://oproc.dresden.org/",
+    "type": "https://schema.oproc.org/0.1/system",
+    "entrypoints": "https://process.stadt.de/process/",
+    "name": "Beispiel-System",
+    "email": "info@stadt.de",
+    "contact": "John Doe, Rocket Science Inc.",
+    "website": "http://www.stadt.de/"
+  },
+  "entrypoint": {
+    "_comment": "Es handelt sich um die obersten Einstiegspunkte",
+    "type": "https://process.stadt.de/entrypoint/",
+    "list": [
+      "https://process.stadt.de/process/1"
+    ],
+    "created": "2011-11-11T11:11:00+01:00",
+    "modified": "2012-11-11T11:11:00+01:00"
+  }
+}
