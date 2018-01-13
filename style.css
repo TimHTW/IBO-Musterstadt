@@ -1,0 +1,14 @@
+#select_process {
+    width: 500px;
+}
+
+select {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+}
+
+/* #header {
+    background-image: url("musterstadt.jpg");
+} */
+

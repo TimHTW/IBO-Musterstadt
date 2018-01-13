@@ -5,24 +5,62 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
-
 	<body>
-		<div class="grid-container">
-			<div class="header">
-				<div class="form-group">
-					<label for="select_process">Select Process:</label>
-					<select class="form-control" id="select_process"></select>
+
+		<div class="container">
+			<div id="header" class="form-group text-center row">
+				<h2>Visit</h2>
+				<h1>Mittelstadt</h1>
+				<h3>Verfolge die Entstehung einer neuen Stadt von der Planung bis zur Fertigstellung</h3>
+				<div id="test"class="form-group">
+						<label for="select_process">Wähle einen Prozess:</label>
+						<select class="form-control" id="select_process"></select>
 				</div>
 			</div>
-			<div class="sidebar"></div>
-			<div class="content"></div>
-			<div class="footer"></div>
-		</div>
-		
-	</body>
 
+			<div id="content">
+
+				<ul id="mytabs" class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#info">Allgemeine Informationen</a></li>
+					<li><a data-toggle="tab" href="#procces">Teilprozesse</a></li>
+					<li><a data-toggle="tab" href="#stakeholder">Stakeholder</a></li>
+				</ul>
+							
+				<div class="tab-content">
+					<div id="info" class="tab-pane fade in active">
+						<h3>HOME</h3>
+						<p>Some content.</p>
+					</div>
+					<div id="procces" class="tab-pane fade">
+						<h3>Menu 1</h3>
+						<p>Some content in menu 1.</p>
+					</div>
+					<div id="stakeholder" class="tab-pane fade">
+						<div class="container">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Stakeholder</th>
+										<th>Email</th>
+										<th>Website</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div id="sidebar">Sidebar</div>
+			<div id="footer">Footer</div>
+		</div>
+
+			
+	</body>
 	<script type="text/javascript" src="script.js"></script>
 </html>
