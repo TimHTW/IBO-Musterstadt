@@ -25,7 +25,7 @@
       "info": "TODO",
       "decision": "false"
     },
-    "results (optional)": [
+    "results": [
       {
         "id": "https://process.stadt.de/results/1",
         "name": "Final_Wohngebiet Mittelstadt",
@@ -70,7 +70,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34000fafc",
             "name": "Grundsatzbeschluss",
@@ -115,7 +115,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/13",
@@ -148,7 +148,7 @@
           "info": "Erstellen eines Antrages",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae3400110b3",
             "name": "Rückfragenkolloquium",
@@ -192,7 +192,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340011f8c",
             "name": "Wettberwerbsbearbeitung",
@@ -237,11 +237,11 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae3400126ed",
-            "name": "Jurysitzung-PDF",
-            "description": "Jurysitzung-PDF",
+            "name": "Jurysitzung",
+            "description": "Jurysitzung",
             "copyright (optional)": "",
             "text (optional)": "",
             "files (optional)": [],
@@ -250,7 +250,7 @@
           },
           {
             "id": "0b3d7950669df156168ccae340012acc",
-            "name": "Platzzeichnung_dummy-JPG",
+            "name": "Platzzeichnung_dummy.jpg",
             "description": "Platzzeichnung_dummy-JPG",
             "copyright (optional)": "",
             "text (optional)": "",
@@ -292,7 +292,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340013abc",
             "name": "Aufstellungsbeschluss",
@@ -338,7 +338,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340014079",
             "name": "Pressemitteilung_wettbewerb",
@@ -383,7 +383,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae3400147f1",
             "name": "Aufstellungsbeschluss",
@@ -426,7 +426,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340014c54",
             "name": "Veroeffentlichung_im_Standtanzeiger",
@@ -469,7 +469,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/111",
@@ -500,7 +500,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae3400158e2",
             "name": "Verkauf",
@@ -553,7 +553,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001016f",
             "name": "Wettbewerbsauslobung",
@@ -609,7 +609,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae3400174e2",
             "name": "Vorentwurf_Bebauungsplan_dummy",
@@ -655,7 +655,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340018179",
             "name": "Stellungnahme",
@@ -701,10 +701,10 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340018766",
-            "name": "Entwurf_dummy",
+            "name": "Entwurf_dummy.jpg",
             "description": "Entwurf_dummy",
             "copyright (optional)": "",
             "text (optional)": "",
@@ -742,7 +742,7 @@
           "info": "",
           "decision": "nein"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340019933",
             "name": "Beschluss_Auslage",
@@ -787,7 +787,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340018a7d",
             "name": "Beschluss_Auslage",
@@ -831,7 +831,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae340019a9f",
             "name": "Veroeffentlichung_im_stadtanzeiger",
@@ -876,7 +876,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001aa64",
             "name": "Stellungnahme",
@@ -917,7 +917,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001b245",
             "name": "Stellungnahme_Buerger",
@@ -961,7 +961,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001b26c",
             "name": "Abwaegungsprotokoll_dummy",
@@ -1002,11 +1002,11 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001bb2e",
-            "name": "Baubeginn_Erschliessungsstrasse_dummy-jpg",
-            "description": "Baubeginn_Erschliessungsstrasse_dummy-jpg",
+            "name": "Baubeginn_Erschliessungsstrasse_dummy.jpg",
+            "description": "Baubeginn_Erschliessungsstrasse_dummy.jpg",
             "copyright (optional)": "",
             "text (optional)": "",
             "files (optional)": [],
@@ -1043,10 +1043,10 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001ca51",
-            "name": "Entwurf_ueberarbeitet_dummy_Kopie-jpg",
+            "name": "Entwurf_ueberarbeitet_dummy_Kopie.jpg",
             "description": "Entwurf_ueberarbeitet_dummy_Kopie-jpg",
             "copyright (optional)": "",
             "text (optional)": "",
@@ -1087,7 +1087,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001d47c",
             "name": "Stellungnahme",
@@ -1128,7 +1128,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/126",
@@ -1158,7 +1158,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/127",
@@ -1191,7 +1191,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/128",
@@ -1224,7 +1224,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/129",
@@ -1254,7 +1254,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001e2bb",
             "name": "Veroeffentlichung_Stadtanzeiger",
@@ -1297,7 +1297,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/131",
@@ -1330,7 +1330,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/132",
@@ -1365,7 +1365,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/133",
@@ -1400,7 +1400,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/134",
@@ -1434,7 +1434,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/135",
@@ -1467,7 +1467,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/136",
@@ -1502,7 +1502,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/137",
@@ -1535,7 +1535,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/138",
@@ -1566,7 +1566,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": []
+        "results": []
       },
       {
         "id": "https://process.stadt.de/process/139",
@@ -1600,7 +1600,7 @@
           "info": "Erstellen eines Antrages",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001ef82",
             "name": "Stellungnahme_Buerger",
@@ -1645,7 +1645,7 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001f122",
             "name": "Abwaegungsprotokoll_dummy_Kopie",
@@ -1689,7 +1689,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34001f78e",
             "name": "Satzungsbeschluss",
@@ -1734,7 +1734,7 @@
           "info": "",
           "decision": "true"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae34002076c",
             "name": "Satzungsbeschluss",
@@ -1775,7 +1775,7 @@
           "info": "Erstellen eines Antrages",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae3400210dc",
             "name": "Veroeffentlichung_Stadtanzeiger",
@@ -1820,10 +1820,10 @@
           "info": "",
           "decision": "false"
         },
-        "results (optional)": [
+        "results": [
           {
             "id": "0b3d7950669df156168ccae3400214fc",
-            "name": "Baubeginn_dummy-jpg",
+            "name": "Baubeginn_dummy.jpg",
             "description": "Baubeginn_dummy-jpg",
             "copyright (optional)": "",
             "text (optional)": "",

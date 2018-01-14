@@ -8,7 +8,25 @@ select {
     width: 500px;
 }
 
-/* #header {
-    background-image: url("musterstadt.jpg");
-} */
+#header {
+    background-image: url("Image/musterstadt.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 350px;
+}
+
+#header h3 span{
+    background-color: white;
+}
+
+#header h1 {
+    font-size: 5em;
+}
+
+#content .tab-content{
+    height: 500px;
+    overflow-y: scroll
+}
 

@@ -19,15 +19,29 @@ $('#select_process').change(function() {
 });
 
 function get_child_process(id) {
+    $('#content .tab-content #procces').empty();
     $.ajax({
         url: url
     }).then(function(data){
         $.each(data.process.children, function(key,val){
             if (val.id == id){
-                var name = val.name;
-                var description = val.description;
-                $('#content .tab-content #procces').empty();
-                $('#content .tab-content #procces').append("<h4>"+name+"</h4>");
+                $('#content .tab-content #procces').append("<h1>"+val.name+"</h1>");
+                $('#content .tab-content #procces').append("<h2>"+val.description+"</h2>");
+                $('#content .tab-content #procces').append("<h3>"+val.initiator+"</h3>");
+                $('#content .tab-content #procces').append("<h4>"+val.start+"</h4>");
+                
+                if(val.results.length != 0){
+                    $.each(val.results, function(key,val){
+                        result = val.name;
+                        if(result.substring(result.length-4, result.length) == ".jpg"){
+                            $('#content .tab-content #procces').append("<img src='Image/"+result+"'>");
+                        }
+                        else{
+                            $('#content .tab-content #procces').append("<embed src='PDF/"+key+" "+result+".pdf'>");
+                        }        
+                    });
+                }
+
                 $('#mytabs a[href="#procces"]').tab('show');
                 return false;
             }
@@ -36,19 +50,23 @@ function get_child_process(id) {
 }
 
 function get_stakeholder() {
-    var name,
+    var akteur,
+        name,
+        phone,
         email,
         website;
     $.ajax({
         url: url
     }).then(function(data){
         $.each(data.process.stakeholder, function(key, val){
-            name = val.name;
+            akteur = val.name;
             $.each(val.contact, function(key,val){
+                name = "Max Mustermann";
+                phone = "0123456789";
                 email = "example@mail.de";
                 website = "example-website.com";
             });
-            $('#content .tab-content #stakeholder table tbody').append("<tr><td>"+name+"</td><td>"+email+"</td><td>"+website+"</td></tr>");
+            $('#content .tab-content #stakeholder table tbody').append("<tr><td>"+akteur+"</td><td>"+name+"</td><td>"+phone+"</td><td>"+email+"</td><td><a href='#'>"+website+"</a></td></tr>");
         });
     });
 }
