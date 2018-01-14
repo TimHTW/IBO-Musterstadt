@@ -195,7 +195,7 @@
         "results": [
           {
             "id": "0b3d7950669df156168ccae340011f8c",
-            "name": "Wettberwerbsbearbeitung",
+            "name": "Wettbewerbsbearbeitung",
             "description": "Wettberwerbsbearbeitung",
             "copyright (optional)": "",
             "text (optional)": "",
@@ -429,7 +429,7 @@
         "results": [
           {
             "id": "0b3d7950669df156168ccae340014c54",
-            "name": "Veroeffentlichung_im_Standtanzeiger",
+            "name": "Veroeffentlichung_im_Stadtanzeiger",
             "description": "Veroeffentlichung_im_Standtanzeiger",
             "copyright (optional)": "",
             "text (optional)": "",
@@ -612,7 +612,7 @@
         "results": [
           {
             "id": "0b3d7950669df156168ccae3400174e2",
-            "name": "Vorentwurf_Bebauungsplan_dummy",
+            "name": "Vorentwurf_Bebauungsplan_dummy.jpg",
             "description": "Vorentwurf_Bebauungsplan_dummy",
             "copyright (optional)": "",
             "text (optional)": "",
