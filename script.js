@@ -1,6 +1,7 @@
 var process_id;
 var url = "process.json";
 fil_select_box();
+load_processes_in_list_group();
 get_stakeholder();
 
 function fil_select_box() {
@@ -39,10 +40,38 @@ function get_stakeholder() {
     });
 }
 
+$('#FindYourProcces').keyup(function(){
+    var input = jQuery(this).val();
+    jQuery("#list-elements .list-group a").each(function() {
+        if (jQuery(this).text().search(new RegExp(input, "i")) < 0) {
+            jQuery(this).hide();
+        } else {
+            jQuery(this).show()
+        }
+    });
+});
+
+$(document).on('click', '#list-elements .list-group a', function(){
+    var process_id = $(this).attr("id");
+    get_child_process(process_id);
+});
+
 $('#select_process').change(function() {
     process_id = $(this).children(":selected").attr("id");
     get_child_process(process_id);
 });
+
+function load_processes_in_list_group() {
+    $.ajax({
+        url: url
+    }).then(function(data){
+        $.each(data.process.children, function(key,val){
+            key = parseInt(key) + 1;
+            $('#search-box #list-elements .list-group').append("<a id='"+val.id+"' class='list-element'>"+key+". "+ val.name +"</a>")
+        });
+    });
+}
+
 
 function get_child_process(id) {
     var process_number;
