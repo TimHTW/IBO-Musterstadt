@@ -1,17 +1,43 @@
 var process_id;
 var url = "process.json";
+fil_select_box();
 get_stakeholder();
-$.ajax({
-    url: url
-}).then(function(data){
-    $.each(data.process.children, function(key,val){
-        $('#header #select_process').append($('<option>', {
-            id: val.id,
-            value: val.name,
-            text: val.name
-        }));
+
+function fil_select_box() {
+    $.ajax({
+        url: url
+    }).then(function(data){
+        $.each(data.process.children, function(key,val){
+            $('#header #select_process').append($('<option>', {
+                id: val.id,
+                value: val.name,
+                text: val.name
+            }));
+        });
     });
-});
+}
+
+function get_stakeholder() {
+    var akteur,
+        name,
+        phone,
+        email,
+        website;
+    $.ajax({
+        url: url
+    }).then(function(data){
+        $.each(data.process.stakeholder, function(key, val){
+            akteur = val.name;
+            $.each(val.contact, function(key,val){
+                name = "Max Mustermann";
+                phone = "0123456789";
+                email = "example@mail.de";
+                website = "example-website.com";
+            });
+            $('#content .tab-content #stakeholder table tbody').append("<tr><td>"+akteur+"</td><td>"+name+"</td><td>"+phone+"</td><td>"+email+"</td><td><a href='#'>"+website+"</a></td></tr>");
+        });
+    });
+}
 
 $('#select_process').change(function() {
     process_id = $(this).children(":selected").attr("id");
@@ -47,28 +73,6 @@ function get_child_process(id) {
                 $('#mytabs a[href="#procces"]').tab('show');
                 return false;
             }
-        });
-    });
-}
-
-function get_stakeholder() {
-    var akteur,
-        name,
-        phone,
-        email,
-        website;
-    $.ajax({
-        url: url
-    }).then(function(data){
-        $.each(data.process.stakeholder, function(key, val){
-            akteur = val.name;
-            $.each(val.contact, function(key,val){
-                name = "Max Mustermann";
-                phone = "0123456789";
-                email = "example@mail.de";
-                website = "example-website.com";
-            });
-            $('#content .tab-content #stakeholder table tbody').append("<tr><td>"+akteur+"</td><td>"+name+"</td><td>"+phone+"</td><td>"+email+"</td><td><a href='#'>"+website+"</a></td></tr>");
         });
     });
 }

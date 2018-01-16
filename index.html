@@ -7,55 +7,60 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+  		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
 
 		<div class="wrapper">
 
 			<div id="header" class="form-group text-center row">
-				<!-- <h2>Visit</h2> -->
 				<h1>Mittelstadt</h1>
-				<h3><span>Verfolge die Entstehung einer neuen Stadt von der Planung bis zur Fertigstellung</span></h3>
-				<div id="test"class="form-group">
+				<!-- <h3><span>Verfolge die Entstehung einer neuen Stadt von der Planung bis zur Fertigstellung</span></h3> -->
+				<div id="select-wrapper"class="form-group">
 					<label for="select_process">Wähle einen Prozess:</label>
 					<select class="form-control" id="select_process"></select>
 				</div>
 			</div>
 			
-			<div class="container">
-				<div id="content">
-					<ul id="mytabs" class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#info">Allgemeine Informationen</a></li>
-						<li><a data-toggle="tab" href="#procces">Teilprozesse</a></li>
-						<li><a data-toggle="tab" href="#stakeholder">Stakeholder</a></li>
-					</ul>
-									
-					<div class="tab-content">
-						<div id="info" class="tab-pane fade in active">
-							<h3>HOME</h3>
-							<p>Some content.</p>
-						</div>
-						<div id="procces" class="tab-pane fade">
-							<h3>Bitte einen Prozess auswählen</h3>
-						</div>
-						<div id="stakeholder" class="tab-pane fade">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Akteur</th>
-										<th>Kontaktperson</th>
-										<th>Tel.</th>
-										<th>Email</th>
-										<th>Website</th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
+			<div class="main-content">
+				<div class="container">
+					<div id="content">
+						<ul id="tab-header" class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#info">Übersicht</a></li>
+							<li><a data-toggle="tab" href="#procces">Teilprozess</a></li>
+							<li><a data-toggle="tab" href="#stakeholder">Stakeholder</a></li>
+						</ul>
+										
+						<div class="tab-content">
+							<div id="info" class="tab-pane fade in active">
+							</div>
+							<div id="procces" class="tab-pane fade">
+								<h3>Bitte einen Prozess auswählen</h3>
+							</div>
+							<div id="stakeholder" class="tab-pane fade">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Akteur</th>
+											<th>Kontaktperson</th>
+											<th>Tel.</th>
+											<th>Email</th>
+											<th>Website</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 			
 			<div id="sidebar">Sidebar</div>
 			<div id="footer">Footer</div>

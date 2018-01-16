@@ -1,11 +1,19 @@
+body {
+	background: #e7ecea;
+	color: #74777b;
+	font-weight: 400;
+	font-size: 1,5em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
 #select_process {
-    width: 500px;
+    width: 400px;
 }
 
 select {
     display: block;
     margin: 0 auto;
-    width: 500px;
+    width: 400px;
 }
 
 #header {
@@ -25,7 +33,11 @@ select {
     font-size: 5em;
 }
 
-#content .tab-content{
+#content .tab-content {
     height: 500px;
-    overflow-y: scroll
+	overflow-y: scroll;
+	background-color: white;
+}
+
+#content .tab-header {
 }
