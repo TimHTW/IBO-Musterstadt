@@ -8,7 +8,7 @@ function fil_select_box() {
         url: url
     }).then(function(data){
         $.each(data.process.children, function(key,val){
-            $('#header #select_process').append($('<option>', {
+            $('#header #select-box #select_process').append($('<option>', {
                 id: val.id,
                 value: val.name,
                 text: val.name
@@ -70,7 +70,7 @@ function get_child_process(id) {
                     });
                 }
 
-                $('#mytabs a[href="#procces"]').tab('show');
+                $('#tab-header a[href="#procces"]').tab('show');
                 return false;
             }
         });

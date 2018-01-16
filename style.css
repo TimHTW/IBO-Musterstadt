@@ -3,11 +3,44 @@ body {
 	color: #74777b;
 	font-weight: 400;
 	font-size: 1,5em;
-	font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-#select_process {
-    width: 400px;
+#header {
+    background-image: url("Image/town_by_night.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#header h1 {
+    font-size: 5em;
+    color:white;
+}
+
+#header h3 span{
+    background-color: white;
+}
+
+#sidebar{
+    margin-left: 5px;
+    background: #202221;
+    height: 500px;
+}
+
+#content {
+    margin-right: 5px;
+}
+
+#footer {
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #1b1d27;
+    height: 200px;
 }
 
 select {
@@ -16,28 +49,16 @@ select {
     width: 400px;
 }
 
-#header {
-    background-image: url("Image/musterstadt.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 350px;
+#select_process {
+    width: 400px;
 }
 
-#header h3 span{
-    background-color: white;
-}
-
-#header h1 {
-    font-size: 5em;
+#select-wrapper label {
+    color: white;
 }
 
 #content .tab-content {
-    height: 500px;
-	overflow-y: scroll;
+    height: 475px;
+    overflow-x: scroll;
 	background-color: white;
-}
-
-#content .tab-header {
 }
