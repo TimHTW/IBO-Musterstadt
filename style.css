@@ -8,14 +8,14 @@ body {
 }
 
 #header {
-    background-image: url("Image/town_by_night.jpg");
+    background-image: url("Image/street.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 350px;
-    margin-right: 5px;
-    margin-left: 5px;
-    border-radius: 20px;
+    height: 700px;
+    /* margin-right: 5px;
+    margin-left: 5px; */
+    /* border-radius: 20px; */
     box-shadow: 10px 10px 8px #2c2b2b;
 }
 
