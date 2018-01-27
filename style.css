@@ -8,7 +8,8 @@ body {
 }
 
 #header {
-    background-image: url("Image/street.jpeg");
+    background-image: url("Image/planing.jpg");
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,5 +89,9 @@ select {
     overflow-x: scroll;
     background-color: white;
     border-radius: 10px;
+}
+
+#content .tab-content #procces .card {
+    margin-top: 10px;
 }
 

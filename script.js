@@ -3,6 +3,7 @@ var url = "process.json";
 fil_select_box();
 load_processes_in_list_group();
 get_stakeholder();
+get_Prozesslandkarte();
 
 function fil_select_box() {
     $.ajax({
@@ -75,35 +76,130 @@ function load_processes_in_list_group() {
 
 function get_child_process(id) {
     var process_number;
+    var name, description, status, start_date, location_id, initiator_id, initiator, location;
+    var participant_ids = [];
+    var participants = [];
     $('#content .tab-content #procces').empty();
     $.ajax({
         url: url
     }).then(function(data){
         $.each(data.process.children, function(key,val){
             if (val.id == id){
-                $('#content .tab-content #procces').append("<h1>"+val.name+"</h1>");
-                $('#content .tab-content #procces').append("<h2>"+val.description+"</h2>");
-                $('#content .tab-content #procces').append("<h3>"+val.initiator+"</h3>");
-                $('#content .tab-content #procces').append("<h4>"+val.start+"</h4>");
+                 name = val.name;
+                 description = val.description;
+                 status = val.participation;
+                 start_date = val.start;
+                 initiator_id = val.initiator;
+
+                 location_id = val.location;
+
+                 $.each(data.process.locations, function(key, val){
+                     if (val.id == location_id[0]) {
+                         location = val.city;
+                     }
+                 });
+                 
+                $.each(data.process.stakeholder, function(key, val){
+                    if (val.id == initiator_id) {
+                         initiator = val.name;
+                    }
+                });
+
+                $.each(val.participants, function(key,val){
+                    participant_ids.push(val);
+                 });
+
+                 $.each(data.process.stakeholder, function(key, val){
+                     $.each(participant_ids, function(inner_key, inner_val){
+                         if (val.id == inner_val){
+                            participants.push(" "+val.name);
+                         }
+                     });
+                 });
+                
+
+                $('#content .tab-content #procces').append("<div class='container'>"+
+                                                             "<div class='card'>"+
+                                                               "<h3 class='card-header card-info'>"+val.name+"</h3>"+
+                                                               "<div class='card-block'>"+
+                                                                 "<h4 class='card-title'>"+val.description+"</h4>"+
+                                                                 "<p class='card-text'>Initiator: <b>"+initiator+"</b></p>"+
+                                                                 "<p class='card-text'>Ort: <b>"+location+"</b></p>"+
+                                                                 "<p class='card-text'>Beginn: <b>"+start_date+"</b></p>"+
+                                                                 "<p class='card-text'>Status: <b>"+status+"</b></p>"+
+                                                                 "<p class='card-text'>Beteiligte: <b>"+participants+"</b></p>"+
+                                                               "</div>"+
+                                                               "<div class='card-footer card-info'>"+
+                                                                  "<div class='row'></div>"+
+                                                               "</div>"+
+                                                             "</div>"+
+                                                           "</div>");
                 process_number = parseInt(key) + 1;
                 
                 if(val.results.length != 0){
                     $.each(val.results, function(key,val){
                         result = val.name;
                         if(result.substring(result.length-4, result.length) == ".jpg"){
-                            $('#content .tab-content #procces').append("<img src='Image/"+process_number+" "+result+"'>");
+                            $('.card-block').append("<img src='Image/"+process_number+" "+result+"' class='card-img-bottom img-fluid'>");
                         }
                         else{
-                            $('#content .tab-content #procces').append("<embed src='PDF/"+process_number+" "+result+".pdf'>");
+                            $('.card-block').append("<p class='card-text'>Ergebnis: <a href='PDF/"+process_number+" "+result+".pdf'>"+result+"</p>");
                         }        
                     });
                 }
+
+                // if (val.connection.from.length != 0){
+                //     $.each(val.connection.from, function(key,val){
+                //         from = val;
+                //         $('.card-footer .row').append(from);
+                //     });
+                // }
+
+                // if (val.connection.to.length != 0){
+                //     $.each(val.connection.to, function(key,val){
+                //         to = val;
+                //         $('.card-footer .row').append("<div class='col align-self-end'>"+to+"</div>");
+                //     });
+                // }
 
                 $('#tab-header a[href="#procces"]').tab('show');
                 return false;
             }
         });
     });
+}
+
+function get_Prozesslandkarte(){
+    var name,
+        initiator_id,
+        initiator,
+        location_id,
+        location,
+        status;
+
+        $.ajax({
+            url: url
+        }).then(function(data){
+            $.each(data.process.children, function(key, val){
+                name = val.name;
+                initiator_id = val.initiator;
+                status = val.participation;
+                location_id = val.location;
+
+                $.each(data.process.stakeholder, function(key, val){
+                    if (val.id == initiator_id) {
+                         initiator = val.name;
+                    }
+                });
+
+                 $.each(data.process.locations, function(key, val){
+                     if (val.id == location_id[0]) {
+                         location = val.city;
+                     }
+                 });
+                $('#content .tab-content #info table tbody').append("<tr><td>"+name+"</td><td>"+initiator+"</td><td>"+location+"</td><td>"+status+"</td></tr>");
+            });
+        });
 }
 
 // $.ajax({
