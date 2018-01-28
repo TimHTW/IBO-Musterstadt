@@ -4,6 +4,8 @@ fil_select_box();
 load_processes_in_list_group();
 get_stakeholder();
 get_Prozesslandkarte();
+load_galery();
+load_content_for_filter()
 
 function fil_select_box() {
     $.ajax({
@@ -121,7 +123,7 @@ function get_child_process(id) {
                 $('#content .tab-content #procces').append("<div class='container'>"+
                                                              "<div class='card'>"+
                                                                "<h3 class='card-header card-info'>"+val.name+"</h3>"+
-                                                               "<div class='card-block'>"+
+                                                               "<div id='process-card' class='card-block'>"+
                                                                  "<h4 class='card-title'>"+val.description+"</h4>"+
                                                                  "<p class='card-text'>Initiator: <b>"+initiator+"</b></p>"+
                                                                  "<p class='card-text'>Ort: <b>"+location+"</b></p>"+
@@ -140,10 +142,10 @@ function get_child_process(id) {
                     $.each(val.results, function(key,val){
                         result = val.name;
                         if(result.substring(result.length-4, result.length) == ".jpg"){
-                            $('.card-block').append("<img src='Image/"+process_number+" "+result+"' class='card-img-bottom img-fluid'>");
+                            $('.process-card').append("<img src='Image/"+process_number+" "+result+"' class='card-img-bottom img-fluid'>");
                         }
                         else{
-                            $('.card-block').append("<p class='card-text'>Ergebnis: <a href='PDF/"+process_number+" "+result+".pdf'>"+result+"</p>");
+                            $('.process-card').append("<p class='card-text'>Ergebnis: <a href='PDF/"+process_number+" "+result+".pdf'>"+result+"</p>");
                         }        
                     });
                 }
@@ -197,10 +199,288 @@ function get_Prozesslandkarte(){
                          location = val.city;
                      }
                  });
-                $('#content .tab-content #info table tbody').append("<tr><td>"+name+"</td><td>"+initiator+"</td><td>"+location+"</td><td>"+status+"</td></tr>");
+                $('#content .tab-content #info table tbody').append("<tr>"+
+                                                                        "<td>"+name+"</td>"+
+                                                                        "<td id='td-initiator'>"+initiator+"</td>"+
+                                                                        "<td id='td-location'>"+location+"</td>"+
+                                                                        "<td id='td-status'>"+status+"</td>"+
+                                                                    "</tr>");
             });
         });
 }
+
+function load_galery() {
+    var counter = 3;
+    $.ajax({
+        url: url
+    }).then(function(data){
+        $.each(data.process.children, function(key,val){
+                process_number = parseInt(key) + 1;
+                
+                if(val.results.length != 0){
+                    $.each(val.results, function(key,val){
+                        result = val.name;
+                        if(result.substring(result.length-4, result.length) == ".jpg"){
+                            if(counter % 3 === 0){
+                                $('#thumbnail-galery').append("<div class='row justify-content-md-center'><div class='col-md-3'><div id='galery-img' class='img-thumbnail'><a href='Image/"+process_number+" "+result+"'><img src='Image/"+process_number+" "+result+"' style='width:100%'></div></div></div>");
+                            } else {
+                                $('#thumbnail-galery .row').last().append("<div class='col-md-3'><div id='galery-img' class='img-thumbnail'><a href='Image/"+process_number+" "+result+"'><img  src='Image/"+process_number+" "+result+"' style='width:100%'></div></div>");
+                            }
+                            counter++;
+                        }    
+                    });
+                }
+        });
+    });
+}
+
+function load_content_for_filter(){
+
+    var status = ["open", "partial opened", "closed"];
+
+    $.ajax({
+        url: url
+    }).then(function(data){
+        $.each(data.process.stakeholder, function(key,val){
+            $('#select-initiator').append($('<option>', {
+                id: val.id,
+                value: val.name,
+                text: val.name
+            }));
+        });
+        $("#select-initiator").prepend("<option value='' selected='selected'>Alle</option>");
+
+        $.each(data.process.locations, function(key,val){
+            $('#select-location').append($('<option>', {
+                id: val.id,
+                value: val.city,
+                text: val.city
+            }));
+        });
+        $("#select-location").prepend("<option value='' selected='selected'>Alle</option>");
+
+        $.each(status, function(key,val){
+            $('#select-status').append($('<option>', {
+                id: key,
+                value: val,
+                text: val
+            }));
+        });
+        $("#select-status").prepend("<option value='' selected='selected'>Alle</option>");
+    });
+}
+
+var is_initiator_selected = false,
+    is_location_selected = false,
+    is_status_selected = false;
+
+$('#select-initiator').change(function() {
+    var visible_locations = [],
+        visible_status = [];
+    is_initiator_selected = true;
+    var initiator = $(this).children(":selected").attr("value");
+
+    if (!initiator) {
+        is_initiator_selected = false;
+    }
+
+    if (is_location_selected || is_status_selected){
+        jQuery("#info table tbody tr #td-initiator:visible").each(function() {
+            if (jQuery(this).text().search(new RegExp(initiator, "i")) < 0) {
+                jQuery(this).parent().hide();
+            } else {
+                jQuery(this).parent().show()
+            }
+        });
+    } else {
+        jQuery("#info table tbody tr #td-initiator").each(function() {
+            if (jQuery(this).text().search(new RegExp(initiator, "i")) < 0) {
+                jQuery(this).parent().hide();
+            } else {
+                jQuery(this).parent().show()
+            }
+    
+            if (jQuery(this).is(":visible")){
+                visible_locations.push(jQuery(this).text())
+            }
+        });
+    }
+    
+
+    jQuery('#info table tbody tr #td-location:visible').each(function(){
+        visible_locations.push(jQuery(this).text())
+    });
+
+    jQuery('#info table tbody tr #td-status:visible').each(function(){
+        visible_status.push(jQuery(this).text())
+    });
+
+    jQuery('#select-location option').each(function(){
+        if (!jQuery(this).val()) {
+
+        } else {
+            if(jQuery.inArray(jQuery(this).val(), visible_locations) !== -1)  {
+                jQuery(this).attr('disabled', false);
+            } else {
+                jQuery(this).attr('disabled', true);
+            }
+        }
+    });
+
+    jQuery('#select-status option').each(function(){
+        if (!jQuery(this).val()) {
+
+        } else {   
+            if(jQuery.inArray(jQuery(this).val(), visible_status) !== -1)  {
+                jQuery(this).attr('disabled', false);
+            } else {
+                jQuery(this).attr('disabled', true);
+            }
+        }
+    });
+});
+
+$('#select-location').change(function() {
+    var visible_initiators = [],
+        visible_status = [];
+    is_location_selected = true;
+    var location = $(this).children(":selected").attr("value");
+    
+    if (!location) {
+        is_location_selected = false;
+    }
+
+    if (is_initiator_selected || is_status_selected){
+        jQuery("#info table tbody tr #td-location:visible").each(function() {
+            if (jQuery(this).text().search(new RegExp(location, "i")) < 0) {
+                jQuery(this).parent().hide();
+            } else {
+                jQuery(this).parent().show()
+            }
+        });
+    } else {
+        jQuery("#info table tbody tr #td-location").each(function() {
+            if (jQuery(this).text().search(new RegExp(location, "i")) < 0) {
+                jQuery(this).parent().hide();
+            } else {
+                jQuery(this).parent().show()
+            }
+        });
+    }
+
+    jQuery('#info table tbody tr #td-initiator:visible').each(function(){
+        visible_initiators.push(jQuery(this).text())
+    });
+
+    jQuery('#info table tbody tr #td-status:visible').each(function(){
+        visible_status.push(jQuery(this).text())
+    });
+
+    jQuery('#select-initiator option').each(function(){
+        if (!jQuery(this).val()) {
+
+        } else {
+            if(jQuery.inArray(jQuery(this).val(), visible_initiators) !== -1)  {
+                jQuery(this).attr('disabled', false);
+            } else {
+                jQuery(this).attr('disabled', true);
+            }
+        }
+    });
+
+    jQuery('#select-status option').each(function(){
+        if (!jQuery(this).val()) {
+
+        } else {   
+            if(jQuery.inArray(jQuery(this).val(), visible_status) !== -1)  {
+                jQuery(this).attr('disabled', false);
+            } else {
+                jQuery(this).attr('disabled', true);
+            }
+        }
+    });
+});
+
+$('#select-status').change(function() {
+    var visible_initiators = [],
+        visible_locations = [];
+    is_status_selected = true;
+    var status = $(this).children(":selected").attr("value");
+    
+    if (!status) {
+        is_status_selected = false;
+    }
+
+    if (is_initiator_selected || is_location_selected){
+        jQuery("#info table tbody tr #td-status:visible").each(function() {
+            if(!status){
+                jQuery(this).parent().show();
+            } else if (jQuery(this).text() == status)
+                {
+                    jQuery(this).parent().show();
+                } else {
+                    jQuery(this).parent().hide();
+                }
+        });
+    } else {
+        jQuery("#info table tbody tr #td-status").each(function() {
+            if(!status){
+                jQuery(this).parent().show();
+            } else if (jQuery(this).text() == status)
+                {
+                    jQuery(this).parent().show();
+                } else {
+                    jQuery(this).parent().hide();
+                }
+        });
+    }
+
+    jQuery('#info table tbody tr #td-initiator:visible').each(function(){
+        visible_initiators.push(jQuery(this).text())
+    });
+
+    jQuery('#info table tbody tr #td-location:visible').each(function(){
+        visible_locations.push(jQuery(this).text())
+    });
+
+    jQuery('#select-initiator option').each(function(){
+        if (!jQuery(this).val()) {
+
+        } else {
+            if(jQuery.inArray(jQuery(this).val(), visible_initiators) !== -1)  {
+                jQuery(this).attr('disabled', false);
+            } else {
+                jQuery(this).attr('disabled', true);
+            }
+        }
+    });
+
+    jQuery('#select-location option').each(function(){
+        if (!jQuery(this).val()) {
+
+        } else {   
+            if(jQuery.inArray(jQuery(this).val(), visible_locations) !== -1)  {
+                jQuery(this).attr('disabled', false);
+            } else {
+                jQuery(this).attr('disabled', true);
+            }
+        }
+    });
+   
+});
+
+// $('#FindYourProcces').keyup(function(){
+//     var input = jQuery(this).val();
+//     jQuery("#list-elements .list-group a").each(function() {
+//         if (jQuery(this).text().search(new RegExp(input, "i")) < 0) {
+//             jQuery(this).hide();
+//         } else {
+//             jQuery(this).show()
+//         }
+//     });
+// });
+
+
 
 // $.ajax({
 //     url: "process.json"

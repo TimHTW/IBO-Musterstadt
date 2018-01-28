@@ -1,5 +1,8 @@
+
+
 body {
-	background: #e7ecea;
+    background: #e7ecea;
+    /* background: url(https://subtlepatterns.com/patterns/use_your_illusion.png); */
 	/* color: #74777b; */
 	font-weight: 400;
 	font-size: 1,5em;
@@ -8,7 +11,7 @@ body {
 }
 
 #header {
-    background-image: url("Image/planing.jpg");
+    background-image: url("Image/architecure.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,19 +35,28 @@ body {
 #sidebar{
     margin-left: 5px;
     background: #202221;
-    height: 500px;
-    border-radius: 10px;
+    height: 540px;
+    margin-top: 30px;
 }
 
 #list-elements {
+
     overflow-y: scroll;
-    height: 380px;
+    height: 410px;
+}
+
+#test .list-element {
+    font-weight: bold;
+	font-size: 14px;
+	white-space: nowrap;
+  overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .list-element {
     background: white;
     border: none;
-    padding: 9px 32px;
+    padding: 3px 10px;
     /*text-align: center;*/
     text-decoration: none;
     display: inline-block;
@@ -58,7 +70,9 @@ body {
 }
 
 #content {
-    margin-right: 5px;
+    background: #e7ecea;
+    margin-top: 30px;
+    border:solid;
 }
 
 #footer {
@@ -85,13 +99,37 @@ select {
 }
 
 #content .tab-content {
-    height: 475px;
-    overflow-x: scroll;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: white;
-    border-radius: 10px;
 }
 
 #content .tab-content #procces .card {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+
+.nav-tabs {
+    text-align:center;
+}
+
+.content-wrapper {
+    background-image: url("Image/planing2.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+#galery-img {
+    margin-top: 20px;
+}
