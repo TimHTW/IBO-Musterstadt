@@ -11,13 +11,14 @@
 		<!-- HEADER -->
 		<div class="row">
 			<div class="col-md-12">
-				<div id="header" class="form-group text-center">
-					<h1>Visit</h1>
-					<h1>Mittelstadt</h1>
-					<p></p>
-					<div id="select-box"class="form-group">
-						<!-- <label for="select_process">Wähle einen Prozess:</label>
-						<select class="form-control" id="select_process"></select> -->
+				<div id="header" class="form-group">
+					<h2>Visit</h2>
+					<h1 class="text-light title font-2">Mittelstadt</h1>
+					<a href="#" class="scroll-down" address="true"></a>
+					<div class="row justify-content-center">
+						<div class="col-md-5 text-center">
+							<h3>Eine Belegarbeit erstellt durch Tim Bromm im Rahmen der Lehrveranstaltung PBO an der HTW-Dresden</h3>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -150,3 +151,11 @@
 	</body>
 	<script type="text/javascript" src="script.js"></script>
 </html>
+
+<script>
+$(".scroll-down").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#content").offset().top
+    }, 2000);
+});
+</script>

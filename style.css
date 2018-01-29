@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Leckerli+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Josefin+Sans:400,600,700,400italic,600italic);
 
 body {
     background: #e7ecea;
@@ -17,20 +20,47 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
-    /* margin-right: 5px;
-    margin-left: 5px; */
-    /* border-radius: 20px; */
     box-shadow: 10px 10px 8px #2c2b2b;
+    border-radius: 0 0 85% 85% / 30%;
+    overflow: hidden;
 }
 
 #header h1 {
-    font-size: 5em;
-    color:white;
+    font-family: montserrat;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 60px
 }
 
-#header h3 span{
-    background-color: white;
+#header .title { 
+    letter-spacing: .3em; 
+    text-transform: uppercase; 
 }
+
+#header .text-light { 
+    color: #fff ;
+}
+#header .font-2 {
+	font-family: 'josefin sans';
+	font-weight: 700;
+}
+
+#header h3 {
+    font-family: 'georgia';
+    font-style: italic;
+    color: rgb(75, 75, 75);
+    margin-top: 262px;
+}
+
+#header h2 { 
+    margin: 0; 
+    font-family: 'Leckerli One', cursive;
+    text-shadow: 0 2px rgba(0,0,0,.5);
+    font-size: 100px;
+    text-align: center;
+    
+    margin-top: 1cm;
+  }
 
 #sidebar{
     margin-left: 5px;
@@ -122,14 +152,75 @@ select {
 }
 
 .content-wrapper {
-    background-image: url("Image/planing2.jpeg");
+    /* background-image: url("Image/planing2.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     height: 650px;
 }
 
 #galery-img {
     margin-top: 20px;
 }
+
+
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+  }
+  
+  .scroll-down {
+    position: absolute;
+    margin-top: 50px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FFF;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  
+  .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 6px);
+      transform: rotate(-45deg);
+      display: block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid white;
+      border-width: 0px 0 2px 2px;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
