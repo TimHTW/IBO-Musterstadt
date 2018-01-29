@@ -5,7 +5,8 @@ load_processes_in_list_group();
 get_stakeholder();
 get_Prozesslandkarte();
 load_galery();
-load_content_for_filter()
+load_content_for_filter();
+load_footer_content();
 
 function fil_select_box() {
     $.ajax({
@@ -277,9 +278,16 @@ function load_content_for_filter(){
     });
 }
 
+function load_footer_content(){
+    $.ajax({
+        url: url
+    }).then(function(data){
+        $('#footer').append("<p>"+data.system.contact+" | "+data.system.email+" | <a href='"+data.system.website+"'>"+data.system.website+"</a></p>");
+    });
+}
 
 
-$( document ).ready(function() {
+$(document).ready(function() {
     var is_initiator_selected = false,
     is_location_selected = false,
     is_status_selected = false;
