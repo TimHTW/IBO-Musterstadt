@@ -142,10 +142,10 @@ function get_child_process(id) {
                     $.each(val.results, function(key,val){
                         result = val.name;
                         if(result.substring(result.length-4, result.length) == ".jpg"){
-                            $('.process-card').append("<img src='Image/"+process_number+" "+result+"' class='card-img-bottom img-fluid'>");
+                            $('#process-card').append("<img src='Image/"+process_number+" "+result+"' class='card-img-bottom img-fluid'>");
                         }
                         else{
-                            $('.process-card').append("<p class='card-text'>Ergebnis: <a href='PDF/"+process_number+" "+result+".pdf'>"+result+"</p>");
+                            $('#process-card').append("<p class='card-text'>Ergebnis: <a href='PDF/"+process_number+" "+result+".pdf'>"+result+"</p>");
                         }        
                     });
                 }
@@ -236,20 +236,27 @@ function load_galery() {
 
 function load_content_for_filter(){
 
-    var status = ["open", "partial opened", "closed"];
+    var status = ["open", "partial opened", "closed"],
+        initiators = [];
 
     $.ajax({
         url: url
     }).then(function(data){
+
+        $.each(data.process.children, function(key,val){
+            initiators.push(val.initiator);
+        });
         $.each(data.process.stakeholder, function(key,val){
-            $('#select-initiator').append($('<option>', {
-                id: val.id,
-                value: val.name,
-                text: val.name
-            }));
+            if (jQuery.inArray(val.id, initiators) != -1){
+                $('#select-initiator').append($('<option>', {
+                    id: val.id,
+                    value: val.name,
+                    text: val.name
+                }));
+            }
         });
         $("#select-initiator").prepend("<option value='' selected='selected'>Alle</option>");
-
+        
         $.each(data.process.locations, function(key,val){
             $('#select-location').append($('<option>', {
                 id: val.id,
@@ -270,49 +277,81 @@ function load_content_for_filter(){
     });
 }
 
-var is_initiator_selected = false,
+
+
+$( document ).ready(function() {
+    var is_initiator_selected = false,
     is_location_selected = false,
     is_status_selected = false;
+
+    var location = "",
+        initiator = "",
+        status = "";
 
 $('#select-initiator').change(function() {
     var visible_locations = [],
         visible_status = [];
     is_initiator_selected = true;
-    var initiator = $(this).children(":selected").attr("value");
+    initiator = $(this).children(":selected").attr("value");
 
     if (!initiator) {
         is_initiator_selected = false;
     }
 
     if (is_location_selected || is_status_selected){
-        jQuery("#info table tbody tr #td-initiator:visible").each(function() {
-            if (jQuery(this).text().search(new RegExp(initiator, "i")) < 0) {
-                jQuery(this).parent().hide();
-            } else {
-                jQuery(this).parent().show()
-            }
-        });
+        jQuery("#info table tbody tr #td-initiator").each(function() {
+            if(!initiator){   
+                jQuery(this).parent().show();
+            } else if (jQuery(this).text() == initiator){
+                    jQuery(this).parent().show();
+                } else {
+                    jQuery(this).parent().hide();
+                }
+            });
+
+            jQuery("#info table tbody tr #td-location:visible").each(function(){
+                if(!location){   
+                    jQuery(this).parent().show();
+                } else if (jQuery(this).text() == location){
+                        jQuery(this).parent().show();
+                    } else {
+                        jQuery(this).parent().hide();
+                    }
+            });
+        
+            jQuery("#info table tbody tr #td-status:visible").each(function(){
+                if(!status){
+                    jQuery(this).parent().show();
+                } else if (jQuery(this).text() == status)
+                    {
+                        jQuery(this).parent().show();
+                    } else {
+                        jQuery(this).parent().hide();
+                    }
+            });
     } else {
         jQuery("#info table tbody tr #td-initiator").each(function() {
-            if (jQuery(this).text().search(new RegExp(initiator, "i")) < 0) {
-                jQuery(this).parent().hide();
-            } else {
-                jQuery(this).parent().show()
-            }
-    
-            if (jQuery(this).is(":visible")){
-                visible_locations.push(jQuery(this).text())
-            }
+            if(!initiator){   
+                jQuery(this).parent().show();
+            } else if (jQuery(this).text() == initiator){
+                    jQuery(this).parent().show();
+                } else {
+                    jQuery(this).parent().hide();
+                }
         });
     }
     
 
-    jQuery('#info table tbody tr #td-location:visible').each(function(){
-        visible_locations.push(jQuery(this).text())
+    jQuery('#info table tbody tr').each(function(){
+        if(jQuery(this).children('#td-initiator').text() == initiator || !initiator){
+            visible_locations.push(jQuery(this).children('#td-location').text());
+        }
     });
 
-    jQuery('#info table tbody tr #td-status:visible').each(function(){
-        visible_status.push(jQuery(this).text())
+    jQuery('#info table tbody tr').each(function(){
+        if(jQuery(this).children('#td-initiator').text() == initiator || !initiator){
+            visible_status.push(jQuery(this).children('#td-status').text());
+        }
     });
 
     jQuery('#select-location option').each(function(){
@@ -320,9 +359,9 @@ $('#select-initiator').change(function() {
 
         } else {
             if(jQuery.inArray(jQuery(this).val(), visible_locations) !== -1)  {
-                jQuery(this).attr('disabled', false);
+                jQuery(this).show();
             } else {
-                jQuery(this).attr('disabled', true);
+                jQuery(this).hide();
             }
         }
     });
@@ -332,9 +371,9 @@ $('#select-initiator').change(function() {
 
         } else {   
             if(jQuery.inArray(jQuery(this).val(), visible_status) !== -1)  {
-                jQuery(this).attr('disabled', false);
+                jQuery(this).show();
             } else {
-                jQuery(this).attr('disabled', true);
+                jQuery(this).hide();
             }
         }
     });
@@ -344,36 +383,66 @@ $('#select-location').change(function() {
     var visible_initiators = [],
         visible_status = [];
     is_location_selected = true;
-    var location = $(this).children(":selected").attr("value");
+    location = $(this).children(":selected").attr("value");
     
     if (!location) {
         is_location_selected = false;
     }
 
     if (is_initiator_selected || is_status_selected){
-        jQuery("#info table tbody tr #td-location:visible").each(function() {
-            if (jQuery(this).text().search(new RegExp(location, "i")) < 0) {
-                jQuery(this).parent().hide();
-            } else {
-                jQuery(this).parent().show()
-            }
-        });
+        jQuery("#info table tbody tr #td-location").each(function() {
+            if(!location){   
+                jQuery(this).parent().show();
+            } else if (jQuery(this).text() == location){
+                    jQuery(this).parent().show();
+                } else {
+                    jQuery(this).parent().hide();
+                }
+            
+            });
+            jQuery("#info table tbody tr #td-initiator:visible").each(function(){
+                if(!initiator){   
+                    jQuery(this).parent().show();
+                } else if (jQuery(this).text() == initiator){
+                        jQuery(this).parent().show();
+                    } else {
+                        jQuery(this).parent().hide();
+                    }
+            });
+        
+            jQuery("#info table tbody tr #td-status:visible").each(function(){
+                if(!status){
+                    jQuery(this).parent().show();
+                } else if (jQuery(this).text() == status)
+                    {
+                        jQuery(this).parent().show();
+                    } else {
+                        jQuery(this).parent().hide();
+                    }
+            });
     } else {
         jQuery("#info table tbody tr #td-location").each(function() {
-            if (jQuery(this).text().search(new RegExp(location, "i")) < 0) {
-                jQuery(this).parent().hide();
-            } else {
-                jQuery(this).parent().show()
-            }
+            if(!location){
+                jQuery(this).parent().show();
+            } else if (jQuery(this).text() == location)
+                {
+                    jQuery(this).parent().show();
+                } else {
+                    jQuery(this).parent().hide();
+                }
         });
     }
 
-    jQuery('#info table tbody tr #td-initiator:visible').each(function(){
-        visible_initiators.push(jQuery(this).text())
+    jQuery('#info table tbody tr').each(function(){
+        if(jQuery(this).children('#td-location').text() == location || !location){
+            visible_initiators.push(jQuery(this).children('#td-initiator').text());
+        }
     });
 
-    jQuery('#info table tbody tr #td-status:visible').each(function(){
-        visible_status.push(jQuery(this).text())
+    jQuery('#info table tbody tr').each(function(){
+        if(jQuery(this).children('#td-location').text() == location || !location){
+            visible_status.push(jQuery(this).children('#td-status').text());
+        }
     });
 
     jQuery('#select-initiator option').each(function(){
@@ -381,9 +450,9 @@ $('#select-location').change(function() {
 
         } else {
             if(jQuery.inArray(jQuery(this).val(), visible_initiators) !== -1)  {
-                jQuery(this).attr('disabled', false);
+                jQuery(this).show();
             } else {
-                jQuery(this).attr('disabled', true);
+                jQuery(this).hide();
             }
         }
     });
@@ -393,9 +462,9 @@ $('#select-location').change(function() {
 
         } else {   
             if(jQuery.inArray(jQuery(this).val(), visible_status) !== -1)  {
-                jQuery(this).attr('disabled', false);
+                jQuery(this).show();
             } else {
-                jQuery(this).attr('disabled', true);
+                jQuery(this).hide();
             }
         }
     });
@@ -405,90 +474,92 @@ $('#select-status').change(function() {
     var visible_initiators = [],
         visible_locations = [];
     is_status_selected = true;
-    var status = $(this).children(":selected").attr("value");
+    status = $(this).children(":selected").attr("value");
     
     if (!status) {
         is_status_selected = false;
     }
 
     if (is_initiator_selected || is_location_selected){
-        jQuery("#info table tbody tr #td-status:visible").each(function() {
-            if(!status){
-                jQuery(this).parent().show();
-            } else if (jQuery(this).text() == status)
-                {
-                    jQuery(this).parent().show();
-                } else {
-                    jQuery(this).parent().hide();
-                }
-        });
-    } else {
         jQuery("#info table tbody tr #td-status").each(function() {
-            if(!status){
+            if(!status){   
                 jQuery(this).parent().show();
-            } else if (jQuery(this).text() == status)
-                {
+            } else if (jQuery(this).text() == status){
                     jQuery(this).parent().show();
                 } else {
                     jQuery(this).parent().hide();
                 }
-        });
-    }
-
-    jQuery('#info table tbody tr #td-initiator:visible').each(function(){
-        visible_initiators.push(jQuery(this).text())
-    });
-
-    jQuery('#info table tbody tr #td-location:visible').each(function(){
-        visible_locations.push(jQuery(this).text())
-    });
-
-    jQuery('#select-initiator option').each(function(){
-        if (!jQuery(this).val()) {
-
+            
+            });
+            jQuery("#info table tbody tr #td-initiator:visible").each(function(){
+                if(!initiator){   
+                    jQuery(this).parent().show();
+                } else if (jQuery(this).text() == initiator){
+                        jQuery(this).parent().show();
+                    } else {
+                        jQuery(this).parent().hide();
+                    }
+            });
+        
+            jQuery("#info table tbody tr #td-location:visible").each(function(){
+                if(!location){   
+                    jQuery(this).parent().show();
+                } else if (jQuery(this).text() == location){
+                        jQuery(this).parent().show();
+                    } else {
+                        jQuery(this).parent().hide();
+                    }
+            });
+            
         } else {
-            if(jQuery.inArray(jQuery(this).val(), visible_initiators) !== -1)  {
-                jQuery(this).attr('disabled', false);
-            } else {
-                jQuery(this).attr('disabled', true);
-            }
+            jQuery("#info table tbody tr #td-status").each(function() {
+                if(!status){
+                    jQuery(this).parent().show();
+                } else if (jQuery(this).text() == status)
+                    {
+                        jQuery(this).parent().show();
+                    } else {
+                        jQuery(this).parent().hide();
+                    }
+            });
         }
+
+        jQuery('#info table tbody tr').each(function(){
+            if(jQuery(this).children('#td-status').text() == status || !status){
+                visible_initiators.push(jQuery(this).children('#td-initiator').text());
+            }
+        });
+
+        jQuery('#info table tbody tr').each(function(){
+            if(jQuery(this).children('#td-status').text() == status || !status){
+                visible_locations.push(jQuery(this).children('#td-location').text());
+            }
+        });
+
+        jQuery('#select-initiator option').each(function(){
+            if (!jQuery(this).val()) {
+
+            } else {
+                if(jQuery.inArray(jQuery(this).val(), visible_initiators) !== -1)  {
+                    jQuery(this).show();
+                } else {
+                    jQuery(this).hide();
+                }
+            }
+        });
+
+        jQuery('#select-location option').each(function(){
+            if (!jQuery(this).val()) {
+
+            } else {   
+                if(jQuery.inArray(jQuery(this).val(), visible_locations) !== -1)  {
+                    jQuery(this).show();
+                } else {
+                    jQuery(this).hide();
+                }
+            }
+        });
+    
     });
 
-    jQuery('#select-location option').each(function(){
-        if (!jQuery(this).val()) {
-
-        } else {   
-            if(jQuery.inArray(jQuery(this).val(), visible_locations) !== -1)  {
-                jQuery(this).attr('disabled', false);
-            } else {
-                jQuery(this).attr('disabled', true);
-            }
-        }
-    });
-   
 });
-
-// $('#FindYourProcces').keyup(function(){
-//     var input = jQuery(this).val();
-//     jQuery("#list-elements .list-group a").each(function() {
-//         if (jQuery(this).text().search(new RegExp(input, "i")) < 0) {
-//             jQuery(this).hide();
-//         } else {
-//             jQuery(this).show()
-//         }
-//     });
-// });
-
-
-
-// $.ajax({
-//     url: "process.json"
-// }).then(function(data){
-//     var process_list = [];
-//     $.each(data.process.children, function(key,val){
-//         $.each(val.connection.to, function(key, val) {
-//             $("body").append("<li id='" + key + "'>" + val + "</li>" );
-//         });
-//     });
-// });
