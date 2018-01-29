@@ -282,7 +282,7 @@ function load_footer_content(){
     $.ajax({
         url: url
     }).then(function(data){
-        $('#footer').append("<p>"+data.system.contact+" | "+data.system.email+" | <a href='"+data.system.website+"'>"+data.system.website+"</a></p>");
+        $('#footer').append("<p>"+data.system.contact+" | email: "+data.system.email+" | <a href='"+data.system.website+"'>"+data.system.website+"</a></p>");
     });
 }
 

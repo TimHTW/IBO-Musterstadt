@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Josefin+Sans:400,600,700,400italic,600italic);
 
 body {
-    background: #e7ecea;
+    background: #ffffff;
     /* background: url(https://subtlepatterns.com/patterns/use_your_illusion.png); */
 	/* color: #74777b; */
 	font-weight: 400;
@@ -63,40 +63,54 @@ body {
   }
 
 #sidebar{
-    margin-left: 5px;
-    background: #202221;
-    height: 540px;
+    margin-left: 8px;
+    background: rgba(255, 255, 255, 0.733);
+    height: 546px;
     margin-top: 30px;
+}
+
+#search-box label {
+    font-family: 'georgia';
+    font-style: italic;
+    margin-top: 3px;
+}
+
+#search-field {
+    margin-top: 5px;
 }
 
 #list-elements {
 
     overflow-y: scroll;
-    height: 410px;
-}
-
-#test .list-element {
-    font-weight: bold;
-	font-size: 14px;
-	white-space: nowrap;
-  overflow: hidden;
-	text-overflow: ellipsis;
+    height: 425px;
+    
+    
 }
 
 .list-element {
     background: white;
     border: none;
     padding: 3px 10px;
-    /*text-align: center;*/
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+
+    font-weight: bold;
+	font-size: 14px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .list-element:hover{
-	background-color: #DCDCDC;
+	background-color: rgb(148, 148, 148);
+}
+
+#info-icon {
+    float: right;
+    margin-top: 8px;
 }
 
 #content {
@@ -112,6 +126,8 @@ body {
 
 #footer p{
     color: #FFF;
+    font-family: 'georgia';
+    font-style: italic;
 }
 
 select {
@@ -152,11 +168,11 @@ select {
 }
 
 .content-wrapper {
-    /* background-image: url("Image/planing2.jpeg");
+    background-image: url("Image/planing4.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     height: 650px;
 }
 
@@ -224,3 +240,13 @@ select {
       transform: translateY(-5px);
     }
   }
+
+  #textSpan {
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:10px;
+	color:rgb(255, 255, 255);
+	font-size:12px Arial;
+}

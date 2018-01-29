@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://use.fontawesome.com/3ee8578aec.js"></script>		
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
@@ -23,8 +24,9 @@
 				</div>
 			</div>
 		</div>
-		<!-- SIDEBAR -->
+		
 		<div class="content-wrapper">
+<!-- SIDEBAR -->
 			<div class="row">
 				<div class="col-md-3">
 					<div id="sidebar">
@@ -32,7 +34,12 @@
 							<form>
 								<div class="form-group">
 									<label for="FindYourProcces">Wähle einen Prozess...</label>
-									<input type="text" class="form-control" id="FindYourProcces" placeholder="Prozess...">
+									<i id="info-icon" class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+									<p id="hidden-info" title="Hier kann nach einem Prozessnamen gesucht werden.</br> Durch die Auswahl eines Prozzesses können weitere Informationen abgerufen werden." style="display:none;"></p>
+									<div id="search-field" class="input-group">
+										<span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" id="FindYourProcces" placeholder="Prozess...">
+									</div>
 								</div>
 							</form>
 							<div id="list-elements">
@@ -144,7 +151,7 @@
 			</br>
 			</div>
 		</div>
-
+		<span id="textSpan" style="display:none;position:absolute;"></span>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>		
@@ -153,9 +160,19 @@
 </html>
 
 <script>
-$(".scroll-down").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#content").offset().top
-    }, 2000);
+$(document).ready(function(){
+	$(".scroll-down").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#content").offset().top
+		}, 2000);
+	});
+
+    $("#info-icon").on('mouseover',function(e) {
+        var info = $('#hidden-info').attr('title');
+        $("#textSpan").html(info).css({left:e.pageX, top:e.pageY-15}).show();
+    });
+    $("#info-icon").on('mouseout',function(e) {
+         $("#textSpan").hide();
+    });
 });
 </script>
