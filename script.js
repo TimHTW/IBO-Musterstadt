@@ -123,16 +123,33 @@ function get_child_process(id) {
 
                 $('#content .tab-content #procces').append("<div class='container'>"+
                                                              "<div class='card'>"+
-                                                               "<h3 class='card-header card-info'>"+val.name+"</h3>"+
+                                                               "<h3 class='card-header card-warning'>"+val.name+"</h3>"+
                                                                "<div id='process-card' class='card-block'>"+
-                                                                 "<h4 class='card-title'>"+val.description+"</h4>"+
-                                                                 "<p class='card-text'>Initiator: <b>"+initiator+"</b></p>"+
-                                                                 "<p class='card-text'>Ort: <b>"+location+"</b></p>"+
-                                                                 "<p class='card-text'>Beginn: <b>"+start_date+"</b></p>"+
-                                                                 "<p class='card-text'>Status: <b>"+status+"</b></p>"+
-                                                                 "<p class='card-text'>Beteiligte: <b>"+participants+"</b></p>"+
+                                                                    "<h4 class='card-title'>"+val.description+"</h4>"+
+                                                                    "<table class='table-striped'>"+
+                                                                            "<tr>"+
+                                                                            "<th class='col-md-1'>Initiator:</th>"+
+                                                                            "<td class='col-md-2'>"+initiator+"<br /></td>"+
+                                                                            "</tr>"+
+                                                                            "<tr>"+
+                                                                            "<th class='col-md-1'>Ort:</th>"+
+                                                                            "<td class='col-md-2'>"+location+"</td>"+
+                                                                            "</tr>"+
+                                                                            "<tr>"+
+                                                                            "<th class='col-md-1'>Beginn:</th>"+
+                                                                            "<td class='col-md-2'>"+start_date+"</td>"+
+                                                                            "</tr>"+
+                                                                            "<tr>"+
+                                                                            "<th class='col-md-1'>Status:</th>"+
+                                                                            "<td class='col-md-2'>"+status+"</td>"+
+                                                                            "</tr>"+
+                                                                            "<tr>"+
+                                                                            "<th class='col-md-1'>Beteiligte:</th>"+
+                                                                            "<td class='col-md-4'>"+participants+"</td>"+
+                                                                            "</tr>"+
+                                                                    "</table>"+
                                                                "</div>"+
-                                                               "<div class='card-footer card-info'>"+
+                                                               "<div class='card-footer card-warning'>"+
                                                                   "<div class='row'></div>"+
                                                                "</div>"+
                                                              "</div>"+
@@ -146,7 +163,7 @@ function get_child_process(id) {
                             $('#process-card').append("<img src='Image/"+process_number+" "+result+"' class='card-img-bottom img-fluid'>");
                         }
                         else{
-                            $('#process-card').append("<p class='card-text'>Ergebnis: <a href='PDF/"+process_number+" "+result+".pdf'>"+result+"</p>");
+                            $('#process-card table').append("<tr><th class='col-md-1'>Ergebnis:</th><td class='col-md-2'><a href='PDF/"+process_number+" "+result+".pdf'>"+result+"</td></tr>");
                         }        
                     });
                 }
@@ -201,10 +218,10 @@ function get_Prozesslandkarte(){
                      }
                  });
                 $('#content .tab-content #info table tbody').append("<tr>"+
-                                                                        "<td>"+name+"</td>"+
-                                                                        "<td id='td-initiator'>"+initiator+"</td>"+
-                                                                        "<td id='td-location'>"+location+"</td>"+
-                                                                        "<td id='td-status'>"+status+"</td>"+
+                                                                        "<td class='col-md-5' id='td-name'>"+name+"</td>"+
+                                                                        "<td class='col-md-3' id='td-initiator'>"+initiator+"</td>"+
+                                                                        "<td class='col-md-2' id='td-location'>"+location+"</td>"+
+                                                                        "<td class='col-md-2' id='td-status'>"+status+"</td>"+
                                                                     "</tr>");
             });
         });

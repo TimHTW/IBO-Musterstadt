@@ -5,8 +5,8 @@
 
 body {
     background: #ffffff;
-    /* background: url(https://subtlepatterns.com/patterns/use_your_illusion.png); */
-	/* color: #74777b; */
+    background: url(https://subtlepatterns.com/patterns/use_your_illusion.png);
+	background-attachment: fixed;
 	font-weight: 400;
 	font-size: 1,5em;
     font-family: 'Raleway', Arial, sans-serif;
@@ -27,7 +27,7 @@ body {
 
 #header h1 {
     font-family: montserrat;
-    margin-top: 50px;
+    margin-top: 45px;
     text-align: center;
     font-size: 60px
 }
@@ -49,7 +49,7 @@ body {
     font-family: 'georgia';
     font-style: italic;
     color: rgb(75, 75, 75);
-    margin-top: 262px;
+    margin-top: 238px;
 }
 
 #header h2 { 
@@ -64,8 +64,8 @@ body {
 
 #sidebar{
     margin-left: 8px;
-    background: rgba(255, 255, 255, 0.733);
-    height: 546px;
+    background: rgba(255, 255, 255, 0.65);
+    height: 556px;
     margin-top: 30px;
 }
 
@@ -82,7 +82,7 @@ body {
 #list-elements {
 
     overflow-y: scroll;
-    height: 425px;
+    height: 430px;
     
     
 }
@@ -116,7 +116,7 @@ body {
 #content {
     background: #e7ecea;
     margin-top: 30px;
-    border:solid;
+    background: rgba(255, 255, 255, 0.65);
 }
 
 #footer {
@@ -145,17 +145,46 @@ select {
 }
 
 #content .tab-content {
-    height: 500px;
+    height: 510px;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.75);
 }
 
-#content .tab-content #procces .card {
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
+#tab-header {
 }
+
+#filter{
+    color: rgb(0, 0, 0);
+}
+
+#collapseTwo label {
+    font-family: 'georgia';
+    font-style: italic;
+    font-weight: bold;
+}
+
+#content .tab-content .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+thead {
+    background-color: rgb(73, 73, 73);
+}
+
+th {
+    color: white;
+}
+
+td {
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+}
+
+/* .card-muted {
+    background-color: rgb(73, 73, 73);
+    color: white;
+} */
 
 .nav-tabs > li {
     float:none;
@@ -178,6 +207,43 @@ select {
 
 #galery-img {
     margin-top: 20px;
+}
+
+#content .tab-content #procces th{
+    color: black;
+}
+
+#content .tab-content #procces tr{
+    height: 50px;
+}
+
+#content .tab-content #procces #process-card img {
+    margin-top: 15px;
+}
+
+#process-card .card-title {
+    font-style: italic;
+    font-family: 'georgia';
+}
+
+#content .tab-content #procces .card h3{
+    font-family: Arial Black, Arial Bold, Gadget, sans-serif;
+}
+
+#placeholder {
+    font-family: 'georgia';
+    font-style: italic;
+    margin-top: 3px;
+
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#copyright {
+    font-family: Brush Script MT, cursive;
+    color: white;
 }
 
 
