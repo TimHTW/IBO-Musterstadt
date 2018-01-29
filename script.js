@@ -82,7 +82,7 @@ function get_child_process(id) {
     var name, description, status, start_date, location_id, initiator_id, initiator, location;
     var participant_ids = [];
     var participants = [];
-    $('#content .tab-content #procces').empty();
+
     $.ajax({
         url: url
     }).then(function(data){
@@ -108,6 +108,7 @@ function get_child_process(id) {
                     }
                 });
 
+
                 $.each(val.participants, function(key,val){
                     participant_ids.push(val);
                  });
@@ -120,8 +121,10 @@ function get_child_process(id) {
                      });
                  });
                 
-
-                $('#content .tab-content #procces').append("<div class='container'>"+
+                 $('#content .tab-content #procces').fadeOut(function(){
+                    $(this).empty();
+                }).fadeIn(function(){
+                    $('#content .tab-content #procces').append("<div class='container'>"+
                                                              "<div class='card'>"+
                                                                "<h3 class='card-header card-warning'>"+val.name+"</h3>"+
                                                                "<div id='process-card' class='card-block'>"+
@@ -167,20 +170,9 @@ function get_child_process(id) {
                         }        
                     });
                 }
+                });
 
-                // if (val.connection.from.length != 0){
-                //     $.each(val.connection.from, function(key,val){
-                //         from = val;
-                //         $('.card-footer .row').append(from);
-                //     });
-                // }
-
-                // if (val.connection.to.length != 0){
-                //     $.each(val.connection.to, function(key,val){
-                //         to = val;
-                //         $('.card-footer .row').append("<div class='col align-self-end'>"+to+"</div>");
-                //     });
-                // }
+                
 
                 $('#tab-header a[href="#procces"]').tab('show');
                 return false;
