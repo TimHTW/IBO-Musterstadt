@@ -2,7 +2,7 @@ var process_id;
 var url = "process.json";
 fil_select_box();
 load_processes_in_list_group();
-get_stakeholder();
+get_timeline();
 get_Prozesslandkarte();
 load_galery();
 load_content_for_filter();
@@ -22,27 +22,60 @@ function fil_select_box() {
     });
 }
 
-function get_stakeholder() {
-    var akteur,
-        name,
-        phone,
-        email,
-        website;
+var dates = [];
+function get_timeline() {
+    var date;
     $.ajax({
         url: url
     }).then(function(data){
-        $.each(data.process.stakeholder, function(key, val){
-            akteur = val.name;
-            $.each(val.contact, function(key,val){
-                name = "Max Mustermann";
-                phone = "0123456789";
-                email = "example@mail.de";
-                website = "example-website.com";
+        $.each(data.process.children, function(key,val){
+            date = val.start.substring(0,10).split("-");
+            dates.push({
+                id: Number(date[0]+date[1]+date[2]),
+                year: date[0],
+                month: date[1],
+                day: date[2],
+                name: val.name
             });
-            $('#content .tab-content #stakeholder table tbody').append("<tr><td>"+akteur+"</td><td>"+name+"</td><td>"+phone+"</td><td>"+email+"</td><td><a href='#'>"+website+"</a></td></tr>");
+            dates.sort(SortBykey);
         });
+
+        var all_years_on_timeline = [];
+        $.each(dates, function(i, e){
+            var year = dates[i].year;
+            var month = dates[i].month;
+            var day = dates[i].day;
+            var processname = dates[i].name;
+            
+            if(jQuery.inArray(year, all_years_on_timeline) == -1){
+                $('.timeline').append("<h2>"+year+"</h2>"+
+                                        "<ul class='timeline-items'>"+
+                                        "<li class='timeline-item'>"+
+                                            "<h3>"+processname+"</h3>"+
+                                            "<hr>"+
+                                            "<time>"+day+"."+month+"."+year+"</time>"+
+                                        "</li>"+
+                                        "</ul>");
+            } else {
+                $('.timeline').append("<ul class='timeline-items'>"+
+                                        "<li class='timeline-item'>"+
+                                            "<h3>"+processname+"</h3>"+
+                                            "<hr>"+
+                                            "<time>"+day+"."+month+"."+year+"</time>"+
+                                        "</li>"+
+                                        "</ul>");
+            }
+            all_years_on_timeline.push(year);
+        });
+    
     });
 }
+
+function SortBykey(a, b){
+    var aKey = a.id;
+    var bKey = b.id; 
+    return ((aKey < bKey) ? -1 : ((aKey > bKey) ? 1 : 0));
+  }
 
 $('#FindYourProcces').keyup(function(){
     var input = jQuery(this).val();
@@ -83,6 +116,7 @@ function get_child_process(id) {
     var participant_ids = [];
     var participants = [];
 
+    $('#content .tab-content #procces').empty();
     $.ajax({
         url: url
     }).then(function(data){
@@ -120,10 +154,6 @@ function get_child_process(id) {
                          }
                      });
                  });
-                
-                 $('#content .tab-content #procces').fadeOut(function(){
-                    $(this).empty();
-                }).fadeIn(function(){
                     $('#content .tab-content #procces').append("<div class='container'>"+
                                                              "<div class='card'>"+
                                                                "<h3 class='card-header card-warning'>"+val.name+"</h3>"+
@@ -170,9 +200,6 @@ function get_child_process(id) {
                         }        
                     });
                 }
-                });
-
-                
 
                 $('#tab-header a[href="#procces"]').tab('show');
                 return false;
@@ -243,6 +270,8 @@ function load_galery() {
         });
     });
 }
+
+
 
 function load_content_for_filter(){
 
@@ -578,5 +607,4 @@ $('#select-status').change(function() {
         });
     
     });
-
 });
