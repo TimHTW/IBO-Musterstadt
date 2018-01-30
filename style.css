@@ -80,11 +80,8 @@ body {
 }
 
 #list-elements {
-
     overflow-y: scroll;
-    height: 430px;
-    
-    
+    height: 430px;  
 }
 
 .list-element {
@@ -151,9 +148,6 @@ select {
     background: rgba(255, 255, 255, 0.75);
 }
 
-#tab-header {
-}
-
 #filter{
     color: rgb(0, 0, 0);
 }
@@ -180,11 +174,6 @@ th {
 td {
     font-family: Futura, Trebuchet MS, Arial, sans-serif;
 }
-
-/* .card-muted {
-    background-color: rgb(73, 73, 73);
-    color: white;
-} */
 
 .nav-tabs > li {
     float:none;
@@ -245,8 +234,6 @@ td {
     font-family: Brush Script MT, cursive;
     color: white;
 }
-
-
 
 .scroll-down {
     opacity: 1;

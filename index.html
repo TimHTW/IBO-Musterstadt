@@ -5,24 +5,27 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<!-- FontAwesome -->
 		<script src="https://use.fontawesome.com/3ee8578aec.js"></script>		
-		<link rel="stylesheet" href="style.css">
 		<!-- timelify -->
 		<link rel="stylesheet" href="jquery-timelify-master/css/timelify.css">
 		<link rel="stylesheet" href="jquery-timelify-master/css/font-awesome.min.css">
 		<link rel="stylesheet" href="jquery-timelify-master/css/animate.css">
+		<!-- myStyle -->
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+
 		<!-- HEADER -->
 		<div class="row">
 			<div class="col-md-12">
 				<div id="header" class="form-group">
-						<div class="row justify-content-end">
-								<div id="copyright" class="col-2 text-center">
-										<i class="fa fa-copyright fa-sm" aria-hidden="true"></i>
-										Tim Bromm, s76782
-								</div>
+					<div class="row justify-content-end">
+						<div id="copyright" class="col-2 text-center">
+							<i class="fa fa-copyright fa-sm" aria-hidden="true"></i>
+							Tim Bromm, s76782
 						</div>
+					</div>
 					<h2>Visit</h2>
 					<h1 class="text-light title font-2">Mittelstadt</h1>
 					<a href="#" class="scroll-down" address="true"></a>
@@ -36,7 +39,7 @@
 		</div>
 		
 		<div class="content-wrapper">
-<!-- SIDEBAR -->
+			<!-- SIDEBAR -->
 			<div class="row">
 				<div class="col-md-3">
 					<div id="sidebar">
@@ -53,12 +56,12 @@
 								</div>
 							</form>
 							<div id="list-elements">
-								<div id="test" class="list-group"></div>
+								<div class="list-group"></div>
 							</div>
 						</div>
 					</div>
 				</div> 
-		<!--CONTENT  -->
+				<!--CONTENT  -->
 				<div class="col-md-9">
 					<div id="content">
 						<ul id="tab-header" class="nav nav-tabs" role="tablist">
@@ -117,7 +120,7 @@
 										</div>
 									</div>
 
-									<table id="test" class="table table-striped table-hover table-sm">
+									<table class="table table-striped table-hover table-sm">
 										<thead>
 											<tr>
 												<th>Prozess</th>
@@ -137,7 +140,7 @@
 							<div id="timeline" class="tab-pane fade" role="tabpanel">
 								<div class="row justify-content-end">
 
-									<div class="col-md-10">
+									<div id="timeline-col" class="col-md-10">
 										<div class="timeline"></div>
 									</div>
 								</div>
@@ -150,24 +153,25 @@
 				</div>
 			</div>
 		</div>
+		<!-- Footer -->
 		<div class="row">
-			<div id="footer" class="col-md-12 text-center">
-			</br>
-			</div>
+			<div id="footer" class="col-md-12 text-center"></br></div>
 		</div>
+
 		<span id="textSpan" style="display:none;position:absolute;"></span>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>		
+		<script type="text/javascript" src="script.js"></script>
+		<!-- timelify -->
+		<script type="text/javascript" src="jquery-timelify-master/js/jquery.timelify.js"></script>
 	</body>
-	<script type="text/javascript" src="script.js"></script>
-
-	<!-- timelify -->
-	<script type="text/javascript" src="jquery-timelify-master/js/jquery.timelify.js"></script>
 </html>
 
 <script>
 $(document).ready(function(){
+
 	$(".scroll-down").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#content").offset().top
@@ -180,6 +184,7 @@ $(document).ready(function(){
     });
     $("#info-icon").on('mouseout',function(e) {
          $("#textSpan").hide();
-    });
+	});
+
 });
 </script>
