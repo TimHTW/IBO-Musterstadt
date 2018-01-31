@@ -19,7 +19,11 @@ Anpassungen an der von mir verwendeten process.json:
       Um den Stakeholder zu ermitteln, ist ein Vergleich über den Namen ist auch möglich, über die ID ist dies allerdings "sauberer". Daher wurde der Name durch die jeweilige ID ersetzt. Gleiches betrifft auch die Locatiuons.
 
 
-Verwendet wurde Bootstrap 4, jQuery, timelify (zur Darstellung des Zeitstrahles) und fontawesome (Icons)
+Verwendet wurde Bootstrap 4, jQuery, timelify (zur Darstellung des Zeitstrahles) und fontawesome (Icons).
+
+
+Um dieses Darstellungsproblem: https://github.com/twbs/bootstrap/issues/21547 von table-cells in Chrome zu lösen,
+wurde speziell in Chrome mit table-layout: fixed; gearbeitet.
 
 
 

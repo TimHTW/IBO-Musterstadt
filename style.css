@@ -198,6 +198,21 @@ td {
     margin-top: 15px;
 }
 
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    table {
+        table-layout: fixed;
+    }
+}
+
+/* Microsoft Edge Browser 15+ - @supports method */
+@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) {
+    table {
+        table-layout: fixed;
+    }
+}
+
 #process-card .card-title {
     font-style: italic;
     font-family: 'georgia';
