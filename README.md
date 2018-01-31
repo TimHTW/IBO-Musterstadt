@@ -1,3 +1,5 @@
+PBO-Belegarbeit von Tim Bromm, s76782
+
 Der Inhalt der json wurde noch vor Weihnachten aus der Angegeben Quelle (sh. Slack => http://141.56.131.7:5984/musterstadt/561fc59f9dcdde3b9bd540334a0005ca) geladen.
 
 In der von mir verwendeten Version der .json wurde das Feld, welches die Kindprozesse enthält, als 
