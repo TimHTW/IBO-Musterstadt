@@ -108,7 +108,7 @@ $(document).ready(function(){
                     name = val.name;
                     description = val.description;
                     status = val.participation;
-                    start_date = val.start;
+                    start_date = val.start.substring(0,10);
                     initiator_id = val.initiator;
 
                     location_id = val.location;
