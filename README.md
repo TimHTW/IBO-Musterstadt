@@ -30,5 +30,7 @@ Verwendet wurde Bootstrap 4, jQuery, timelify (zur Darstellung des Zeitstrahles)
 Um dieses Darstellungsproblem: https://github.com/twbs/bootstrap/issues/21547 von table-cells in Chrome zu lösen,
 wurde speziell in Chrome mit table-layout: fixed; gearbeitet.
 
+Gearbeitet wurde überwiegend mit dem Browser Firefox.
+
 
 
